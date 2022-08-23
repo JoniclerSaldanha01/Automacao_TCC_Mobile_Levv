@@ -93,7 +93,7 @@ public class CadastroLojistaSteps {
 	@Quando("informo (.*) lojista nome fantasia")
 	public void informo_Testes_cia_lojista_nome_fantasia(String NomeFantasia) throws InterruptedException {
 		cadastro.nomeFantasia(NomeFantasia);
-		Thread.sleep(3000);
+		Thread.sleep(13000);
 	}
 	
 	@Quando("cadastro usuario lojista")

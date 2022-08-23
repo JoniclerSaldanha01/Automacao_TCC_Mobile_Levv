@@ -116,9 +116,9 @@ public class CadastroLojistaPage extends CadastroLojistaAttributes {
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
 
 		btnCadastrarEndereco.click();
-		//assertTrue(enderecoLojistaValidado.isDisplayed());
-		//System.out.println("VALIDADO CADASTRO LOJISTA");
-		//Thread.sleep(12000);
+		assertTrue(enderecoLojistaValidado.isDisplayed());
+		System.out.println("VALIDADO CADASTRO LOJISTA");
+		Thread.sleep(12000);
 		
 	}
 	
