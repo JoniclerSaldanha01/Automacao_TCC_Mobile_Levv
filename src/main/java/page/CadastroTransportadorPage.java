@@ -15,41 +15,37 @@ public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
 		
 	}
 
-	// Valida tela de cadastro
-		public void validarTelaRegistro() {
-			assertTrue(nameLastName.isDisplayed());
+	public void selecionaTransportador() {
+		
+		try {
+			transportador.click();
+			Thread.sleep(2000);
+			}
+			catch(Exception e) {
+			  
+			}
+	}
+	
+	public void dataEcpf(String dt, String cpf) {
+		
+		try {
+			diaMesAno.sendKeys(dt);
+			cpfLojista.sendKeys(cpf);
+			Thread.sleep(2000);
+			}
+			catch(Exception e) {
+			  
+			}
+	}
+
+	public void numeroDocumento(String documento){
+		try {
+			docIdentificacao.sendKeys(documento);
+			Thread.sleep(12000);
 		}
-
-	// Insere Nome e SobreNome    
-		public void nome(String name) {
-			nameLastName.sendKeys(name);
+		catch(Exception e) {
 
 		}
-
-		public void phone(String number) {
-			NumberPhone.sendKeys(number);
-		}
-
-		public void email(String email) {
-			Email.sendKeys(email);
-
-		}
-
-		public void senha1(String pass) {
-			password1.sendKeys(pass);
-		}
-
-		public void senha2(String pass) {
-			password2.sendKeys(pass);
-		}
-
-		public void botaoCadastrarCelular() {
-			botaoCadastrar.click();
-		}
-
-		public void cadastroValidador() {
-			assertTrue(validarCadastro.isDisplayed());
-		}
-
+	}
 
 }
