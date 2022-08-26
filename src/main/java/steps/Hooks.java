@@ -16,8 +16,8 @@ public class Hooks {
 
     @After
     public void fecharApp(Scenario cenario) throws Exception{
-       Utils.gerarScreenShot(cenario);
-        driver.quit();
+     //  Utils.gerarScreenShot(cenario);
+      //  driver.quit();
     }
     
     

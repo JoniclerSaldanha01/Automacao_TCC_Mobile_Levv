@@ -35,17 +35,17 @@ public class TestRule {
 
 		extentTest = extentReport.createTest(cenario.getId());
 
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
 
 		// Para acessar a base de dados corretamente
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=C:/Users/Nataliaado/AppData/Local/Google/Chrome/User Data");
+		options.addArguments("user-data-dir=C:/Users/jpass/AppData/Local/Google/Chrome/User Data");
 
 		// Inicia o driver e navega at� a p�gina inicial
 		driver = new AppiumDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.navigate().to("file:///C:/Users/Nataliaado/Documents/versao2/Vers�o 2/index.html");
+		driver.navigate().to("file:///C:/Users/jpass/Documents/versao2/Vers�o 2/index.html");
 
 	}
 

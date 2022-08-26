@@ -1,6 +1,7 @@
 package page;
 
 import static org.junit.Assert.assertTrue;
+import static utils.Utils.driver;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -41,11 +42,76 @@ public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
 	public void numeroDocumento(String documento){
 		try {
 			docIdentificacao.sendKeys(documento);
-			Thread.sleep(12000);
+			Thread.sleep(2000);
 		}
 		catch(Exception e) {
 
 		}
 	}
+
+	public void imagemIdt(){
+		try {
+			btnIdt.click();
+			Thread.sleep(2000);
+			fotoIdt.click();
+			Thread.sleep(2000);
+			aceitarFotoIdt.click();
+			
+		}
+		catch(Exception e) {
+
+		}
+
+	}
+
+	public void selecionaTransporte(){
+		try {
+			moto.click();
+			Thread.sleep(2000);
+		}
+		catch(Exception e) {
+
+		}
+	}
+
+	public void camposObrigatorios(){
+		try {
+			marca.setValue("kawasaki");
+			modelo.click();
+			driver.hideKeyboard();
+			modelo.setValue("Z400");
+			renavan.setValue("125482649700");
+			placa.setValue("KWZ6678");
+			Thread.sleep(22000);
+		}
+		catch(Exception e) {
+
+		}
+	}
+
+
+	public void emitrCrlv(){
+		try {
+			crlv.click();
+			btnFotoCrlv.click();
+			aceitarCrlv.click();
+			
+		}
+		catch(Exception e) {
+
+		}
+	}
+
+	public void cadastroTransportador(){
+		try {
+			cadastroTransportador.click();
+			Thread.sleep(22000);
+		}
+		catch(Exception e) {
+
+		}
+	}
+
+
 
 }

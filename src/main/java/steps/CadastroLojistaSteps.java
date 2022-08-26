@@ -27,10 +27,12 @@ public class CadastroLojistaSteps {
 
 		cadastro.nome(nome);
 		Thread.sleep(4000);
+		//Utils.logPrint("Teste evidencia");
 	}
 
 	@Quando("informo (.*) com DDD")
 	public void informo_com_DDD(String int1) {
+		driver.hideKeyboard();
 		cadastro.phone(int1);
 	}
 

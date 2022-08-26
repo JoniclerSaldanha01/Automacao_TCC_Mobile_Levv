@@ -18,7 +18,12 @@ Funcionalidade: Cadastro de usuario Transportador no sistema Levv
   E seleciono transportador
   E preencho a <dataNascimento> e <cpf> do transportador
   E preencho o <Documento> do transportador
+  E envio uma foto do IDT
+  E seleciono o veiculo
+  Quando preencho demais campos obrigatorios
+  E envio foto CRLV
+  Quando efetuo o cadastro do transportador
 
     Exemplos:
     |Nome        |Celular    |email                  |Senha1|dataNascimento|cpf        |Documento  |
-    |TRA06 Transp|48984554422|06transpteste@gmail.com|123456|24061982      |24665127000|12786588931|
+    |TRA25 Transp|48984554422|25transpteste@gmail.com|123456|24061982      |24665127000|12786588931|

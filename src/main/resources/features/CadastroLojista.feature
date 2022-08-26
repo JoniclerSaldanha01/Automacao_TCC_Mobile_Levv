@@ -25,4 +25,4 @@ Funcionalidade: Cadastro de usuario lojista no sistema Levv
 
     Exemplos:
     |Nome      |Celular    |email                 |Senha1|dataNascimento|cpf        |cnpj          |NomeEmpresa             |NomeFantasia  |
-    |QA66 Desenv|48984554422|66qaqateste@gmail.com|123456|24061982      |24665127000|26180358000137|5 Quality Assurence LTDA|5 Testes & cia|
+    |QA67 Desenv|48984554422|67qaqateste@gmail.com|123456|24061982      |24665127000|26180358000137|5 Quality Assurence LTDA|5 Testes & cia|
