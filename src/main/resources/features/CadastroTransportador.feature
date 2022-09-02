@@ -24,7 +24,7 @@ Funcionalidade: Cadastro de usuario Transportador no sistema Levv
   E envio foto CRLV
   Quando efetuo o cadastro do transportador
   E preencho a tela de cadastro de endereco
-  Entao cadastro com sucesso o endereco do Lojista
+  Entao cadastro com sucesso o endereco
 
     Exemplos:
     |Nome        |Celular    |email                  |Senha1|dataNascimento|cpf        |Documento  |

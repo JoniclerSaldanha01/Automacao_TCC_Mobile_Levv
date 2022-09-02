@@ -111,8 +111,8 @@ public class CadastroLojistaSteps {
 	}
 
 	
-	@Entao("cadastro com sucesso o endereco do Lojista")
-	public void cadastro_com_sucesso_o_endereco_do_Lojista() throws InterruptedException, AWTException {
+	@Entao("cadastro com sucesso o endereco")
+	public void cadastro_com_sucesso_o_endereco() throws InterruptedException, AWTException {
 		driver.hideKeyboard();
 		cadastro.botaoCadastrarEndereco();
 	    Thread.sleep(18000);

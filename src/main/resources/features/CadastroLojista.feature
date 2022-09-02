@@ -21,7 +21,7 @@ Funcionalidade: Cadastro de usuario lojista no sistema Levv
   E informo <NomeFantasia> lojista nome fantasia
   Quando cadastro usuario lojista
   E preencho a tela de cadastro de endereco
-  Entao cadastro com sucesso o endereco do Lojista
+  Entao cadastro com sucesso o endereco
 
     Exemplos:
     |Nome      |Celular    |email                 |Senha1|dataNascimento|cpf        |cnpj          |NomeEmpresa             |NomeFantasia  |
