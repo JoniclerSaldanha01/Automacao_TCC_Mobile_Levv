@@ -116,5 +116,6 @@ public class CadastroLojistaSteps {
 		driver.hideKeyboard();
 		cadastro.botaoCadastrarEndereco();
 	    Thread.sleep(18000);
+
 	}
 }

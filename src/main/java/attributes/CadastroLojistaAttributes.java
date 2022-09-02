@@ -96,4 +96,7 @@ public class CadastroLojistaAttributes {
 	   
 	   @AndroidFindBy(id = "com.example.levv:id/btnEntregarProduto")
 		protected MobileElement enderecoLojistaValidado;
+
+    @AndroidFindBy(id = "android:id/alertTitle")
+    protected MobileElement falhaSistema;
 }

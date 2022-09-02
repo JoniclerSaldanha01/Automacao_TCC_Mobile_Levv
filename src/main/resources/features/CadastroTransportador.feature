@@ -23,7 +23,9 @@ Funcionalidade: Cadastro de usuario Transportador no sistema Levv
   Quando preencho demais campos obrigatorios
   E envio foto CRLV
   Quando efetuo o cadastro do transportador
+  E preencho a tela de cadastro de endereco
+  Entao cadastro com sucesso o endereco do Lojista
 
     Exemplos:
     |Nome        |Celular    |email                  |Senha1|dataNascimento|cpf        |Documento  |
-    |TRA25 Transp|48984554422|25transpteste@gmail.com|123456|24061982      |24665127000|12786588931|
+    |TRA42 Transp|48984554422|42transpteste@gmail.com|123456|24061982      |24665127000|12786588931|

@@ -59,5 +59,14 @@ public class CadastroTransportadorAttributes {
 
     @AndroidFindBy(id = "com.example.levv:id/BtnUserCad")
    	protected MobileElement cadastroTransportador;
+
+
+    // Cadastro endereco
+    @AndroidFindBy(id = "com.android.packageinstaller:id/permission_allow_button")
+    protected MobileElement permitirLocalizacao;
+
+
+
+
     
 }

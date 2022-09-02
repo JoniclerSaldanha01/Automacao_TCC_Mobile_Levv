@@ -82,7 +82,7 @@ public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
 			modelo.setValue("Z400");
 			renavan.setValue("125482649700");
 			placa.setValue("KWZ6678");
-			Thread.sleep(22000);
+
 		}
 		catch(Exception e) {
 
@@ -92,9 +92,13 @@ public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
 
 	public void emitrCrlv(){
 		try {
+			Thread.sleep(2000);
 			crlv.click();
+			Thread.sleep(2000);
 			btnFotoCrlv.click();
+			Thread.sleep(2000);
 			aceitarCrlv.click();
+			Thread.sleep(2000);
 			
 		}
 		catch(Exception e) {
@@ -102,16 +106,16 @@ public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
 		}
 	}
 
-	public void cadastroTransportador(){
+	public void btnCadastrar(){
 		try {
 			cadastroTransportador.click();
-			Thread.sleep(22000);
+			Thread.sleep(8000);
+			permitirLocalizacao.click();
 		}
 		catch(Exception e) {
 
 		}
 	}
-
 
 
 }

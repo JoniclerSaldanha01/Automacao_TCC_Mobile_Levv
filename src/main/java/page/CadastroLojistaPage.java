@@ -1,6 +1,6 @@
 package page;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static utils.Utils.driver;
 
 import java.awt.AWTException;
@@ -119,7 +119,10 @@ public class CadastroLojistaPage extends CadastroLojistaAttributes {
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
 		Thread.sleep(12000);
-		
+		assertEquals( enderecoLojistaValidado,
+				 falhaSistema);
+
+		//assertFalse(falhaSistema.isDisplayed());
 	}
 	
 
