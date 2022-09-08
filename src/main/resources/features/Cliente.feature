@@ -23,4 +23,4 @@ Funcionalidade: Cadastro de usuario Cliente no sistema Levv
 
     Exemplos:
       |Nome         |Celular    |email                    |Senha1|dataNascimento|cpf        |
-      |QA016 Cliente|48999664328|016qaqa.cliente@gmail.com|123456|24061940      |24665127000|
+      |QA022 Cliente|48999664328|022qaqa.cliente@gmail.com|123456|24061940      |24665127000|

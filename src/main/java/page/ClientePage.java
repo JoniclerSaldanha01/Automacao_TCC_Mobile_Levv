@@ -5,6 +5,9 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
+import static utils.BasePage.setText;
+import static utils.Utils.getPropertySettings;
+
 public class ClientePage extends ClienteAttributes {
 
 	public ClientePage(AppiumDriver<?> driver) {
@@ -41,14 +44,15 @@ public class ClientePage extends ClienteAttributes {
 	}
 
 	public void CadastrarEndecoCliente() throws InterruptedException {
-		logradouroLojista.setValue("Praça Alfredo Issa");
-		numero.setValue("488");
-		complemento.setValue("Ap 9 Andar");
+
+		setText(logradouroLojista,getPropertySettings("LevvMobile.data.logradouro"));
+		setText(numero,getPropertySettings("LevvMobile.data.numero"));
+		setText(complemento,getPropertySettings("LevvMobile.data.complemento"));
 		apartamentoTipo.click();
-		cep.setValue("01033-902");
-		bairro.setValue("Centro");
-		cidade.setValue("São Paulo");
-		estado.setValue("São Paulo");
+		setText(cep,getPropertySettings("LevvMobile.data.cep"));
+		setText(bairro,getPropertySettings("LevvMobile.data.bairro"));
+		setText(cidade,getPropertySettings("LevvMobile.data.cidade"));
+		setText(estado,getPropertySettings("LevvMobile.data.estado"));
 		Thread.sleep(2000);
 		estado.click();
 	}
