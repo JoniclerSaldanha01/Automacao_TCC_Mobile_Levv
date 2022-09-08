@@ -115,4 +115,31 @@ public class LojistaSteps {
 		Thread.sleep(18000);
 
 	}
+
+	// Produto Entrega
+	@Dado("que acesse o sistema com usuario cadastrado")
+	public void que_acesse_o_sistema_com_usuario_cadastrado() {
+
+	}
+
+	@Dado("acesso enviar produto")
+	public void acesso_enviar_produto() {
+
+	}
+
+	@Quando("preencho os campos enviar produto")
+	public void preencho_os_campos_enviar_produto() {
+
+	}
+
+	@Quando("clico em enviar pedido")
+	public void clico_em_enviar_pedido() {
+
+	}
+
+	@Entao("valido pedido em Pendentes")
+	public void valido_pedido_em_Pendentes() {
+
+	}
+
 }

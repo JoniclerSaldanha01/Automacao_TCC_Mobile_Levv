@@ -25,4 +25,15 @@ Funcionalidade: Cadastro de usuario lojista no sistema Levv
 
     Exemplos:
     |Nome      |Celular    |email                 |Senha1|dataNascimento|cpf        |cnpj          |NomeEmpresa             |NomeFantasia  |
-    |QA67 Desenv|48984554422|67qaqateste@gmail.com|123456|24061982      |24665127000|26180358000137|5 Quality Assurence LTDA|5 Testes & cia|
+    |QA74 Desenv|48984554422|74qaqateste@gmail.com|123456|24061982      |24665127000|26180358000137|5 Quality Assurence LTDA|5 Testes & cia|
+    
+    
+    
+  @EnviarProduto
+  Cenário: enviar produto para entrega
+  Dado que acesse o sistema com usuario cadastrado
+  E acesso enviar produto
+  Quando preencho os campos enviar produto
+  E clico em enviar pedido
+  Entao valido pedido em Pendentes
+  

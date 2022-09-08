@@ -14,8 +14,8 @@ public class ClienteSteps {
 
 	}
 
-	@Quando("informo (.*)  (.*)")
-	public void informo(String dtNasc, String nCpf) {
+	@Quando("preencho (.*)  (.*)")
+	public void preencho(String dtNasc, String nCpf) {
 		cliente.dataEcpf(dtNasc, nCpf);
 	}
 

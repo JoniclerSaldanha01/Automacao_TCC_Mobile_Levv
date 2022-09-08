@@ -16,7 +16,7 @@ public class ClientePage extends ClienteAttributes {
 
 		try {
 			cliente.click();
-			Thread.sleep(2000);
+			Thread.sleep(6000);
 		} catch (Exception e) {
 
 		}
@@ -27,7 +27,7 @@ public class ClientePage extends ClienteAttributes {
 		try {
 			diaMesAno.sendKeys(dt);
 			cpfLojista.sendKeys(cpf);
-			Thread.sleep(2000);
+			Thread.sleep(6000);
 		} catch (Exception e) {
 
 		}

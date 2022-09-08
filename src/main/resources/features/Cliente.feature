@@ -16,7 +16,7 @@ Funcionalidade: Cadastro de usuario Cliente no sistema Levv
     E confirmo a <Senha1>
     Quando clico em cadastrar
     E seleciono cliente
-    E informo <dataNascimento>  <cpf>
+    E preencho <dataNascimento>  <cpf>
     Quando clico em cadastrar Cliente
     E preencho a tela de cadastro de endereco cliente
     Entao cadastro com sucesso o endereco
