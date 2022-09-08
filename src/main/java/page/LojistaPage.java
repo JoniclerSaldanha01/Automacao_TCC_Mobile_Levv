@@ -1,26 +1,19 @@
 package page;
 
 import static org.junit.Assert.*;
-
 import java.awt.AWTException;
-
 import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-
-
 public class LojistaPage extends LojistaAttributes {
 
 	public LojistaPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		
+
 	}
 
-	
-	
-	
 // Valida tela de cadastro
 	public void validarTelaRegistro() {
 		assertTrue(nameLastName.isDisplayed());
@@ -59,7 +52,7 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void lojista() {
 		selecionaLojista.click();
-		
+
 	}
 
 	// Cadastro Tela Lojista
@@ -88,15 +81,15 @@ public class LojistaPage extends LojistaAttributes {
 		nomeFantasia.sendKeys(nomeFant);
 
 	}
-	
+
 	public void BotaoCadastrarLojista() {
 		cadastrarLojista.click();
 		assertTrue(cadastroLojistaValidado.isDisplayed());
 		cadastroLojistaValidado.click();
 	}
-	
+
 	// CADASTRO ENDERECO LOJISTA
-	
+
 	public void CadastrarEndecoLojista() throws InterruptedException {
 		logradouroLojista.setValue("Praça da Sé");
 		numero.setValue("s/nº");
@@ -116,11 +109,7 @@ public class LojistaPage extends LojistaAttributes {
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
 		Thread.sleep(12000);
-		assertEquals( enderecoLojistaValidado,
-				 falhaSistema);
-
-		//assertFalse(falhaSistema.isDisplayed());
+		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
-	
 
 }

@@ -1,6 +1,5 @@
 package page;
 
-
 import static utils.Utils.driver;
 import org.openqa.selenium.support.PageFactory;
 import attributes.TransportadorAttributes;

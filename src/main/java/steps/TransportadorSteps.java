@@ -1,25 +1,23 @@
 package steps;
 
 import static utils.Utils.driver;
-
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Quando;
 import page.TransportadorPage;
 
-
 public class TransportadorSteps {
-	
+
 	TransportadorPage cadastroTransportador = new TransportadorPage(driver);
-	
+
 	@Quando("seleciono transportador")
 	public void seleciono_transportador() {
 		cadastroTransportador.selecionaTransportador();
 	}
-	
+
 	@E("preencho a (.*) e (.*) do transportador")
 	public void preencho_a_e_do_transportador(String dtNasc, String nCpf) {
 		cadastroTransportador.dataEcpf(dtNasc, nCpf);
-	    
+
 	}
 
 	@Quando("preencho o (.*) do transportador")
@@ -43,13 +41,13 @@ public class TransportadorSteps {
 	public void preencho_demais_campos_obrigatorios() {
 		cadastroTransportador.camposObrigatorios();
 	}
-	
+
 	@Quando("envio foto CRLV")
 	public void envio_foto_CRLV() throws InterruptedException {
 		cadastroTransportador.emitrCrlv();
 		Thread.sleep(20000);
 	}
-	
+
 	@Quando("efetuo o cadastro do transportador")
 	public void efetuo_o_cadastro_do_transportador() throws InterruptedException {
 		cadastroTransportador.btnCadastrar();
