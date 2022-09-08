@@ -2,17 +2,14 @@ package steps;
 
 import static utils.Utils.driver;
 
-import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import page.CadastroLojistaPage;
-import page.CadastroTransportadorPage;
+import page.TransportadorPage;
 
 
-public class CadastroTransportadorSteps {
+public class TransportadorSteps {
 	
-	CadastroTransportadorPage cadastroTransportador = new CadastroTransportadorPage(driver);
+	TransportadorPage cadastroTransportador = new TransportadorPage(driver);
 	
 	@Quando("seleciono transportador")
 	public void seleciono_transportador() {

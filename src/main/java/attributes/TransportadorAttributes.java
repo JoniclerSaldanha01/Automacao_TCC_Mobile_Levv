@@ -2,9 +2,8 @@ package attributes;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.openqa.selenium.By;
 
-public class CadastroTransportadorAttributes {
+public class TransportadorAttributes {
 
 	
 // Atributos Tela de cadastro

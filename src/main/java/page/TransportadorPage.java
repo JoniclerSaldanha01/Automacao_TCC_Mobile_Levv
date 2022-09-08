@@ -1,17 +1,15 @@
 package page;
 
-import static org.junit.Assert.assertTrue;
+
 import static utils.Utils.driver;
-
 import org.openqa.selenium.support.PageFactory;
-
-import attributes.CadastroTransportadorAttributes;
+import attributes.TransportadorAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class CadastroTransportadorPage extends CadastroTransportadorAttributes{
+public class TransportadorPage extends TransportadorAttributes {
 	
-	public CadastroTransportadorPage(AppiumDriver<?> driver) {
+	public TransportadorPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
 	}

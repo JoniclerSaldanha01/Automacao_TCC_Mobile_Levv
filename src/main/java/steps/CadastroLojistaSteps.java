@@ -3,8 +3,7 @@ package steps;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import page.CadastroLojistaPage;
-import utils.Utils;
+import page.LojistaPage;
 
 import static utils.Utils.*;
 
@@ -12,7 +11,7 @@ import java.awt.AWTException;
 
 public class CadastroLojistaSteps {
 
-	CadastroLojistaPage cadastro = new CadastroLojistaPage(driver);
+	LojistaPage cadastro = new LojistaPage(driver);
 
 	@Dado("que o usuario esteja na tela de criacao de Cadastro")
 	public void queOUsuarioEstejaNaTelaDeCriacaoDeCadastro() throws InterruptedException {

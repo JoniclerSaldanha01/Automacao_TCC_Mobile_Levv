@@ -28,4 +28,4 @@ Funcionalidade: Cadastro de usuario Transportador no sistema Levv
 
     Exemplos:
     |Nome        |Celular    |email                  |Senha1|dataNascimento|cpf        |Documento  |
-    |TRA42 Transp|48984554422|42transpteste@gmail.com|123456|24061982      |24665127000|12786588931|
+    |TRA43 Transp|48984554422|43transpteste@gmail.com|123456|24061982      |24665127000|12786588931|

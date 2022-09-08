@@ -1,22 +1,19 @@
 package page;
 
 import static org.junit.Assert.*;
-import static utils.Utils.driver;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.support.PageFactory;
-import attributes.CadastroLojistaAttributes;
+import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 
 
-public class CadastroLojistaPage extends CadastroLojistaAttributes {
+public class LojistaPage extends LojistaAttributes {
 
-	public CadastroLojistaPage(AppiumDriver<?> driver) {
+	public LojistaPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
 	}
