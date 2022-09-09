@@ -1,6 +1,9 @@
 package page;
 
 import static org.junit.Assert.*;
+import static utils.BasePage.setText;
+import static utils.Utils.getPropertySettings;
+
 import java.awt.AWTException;
 import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
@@ -20,8 +23,9 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 // Insere Nome e SobreNome    
-	public void nome(String name) {
-		nameLastName.sendKeys(name);
+	public void nome() {
+		setText(nameLastName,getPropertySettings("LevvMobile.data.nomeLojista"));
+		//nameLastName.sendKeys(name);
 
 	}
 
@@ -29,17 +33,20 @@ public class LojistaPage extends LojistaAttributes {
 		NumberPhone.sendKeys(number);
 	}
 
-	public void email(String email) {
-		Email.sendKeys(email);
+	public void email() {
+		setText(Email,getPropertySettings("LevvMobile.data.email"));
+		//Email.sendKeys(email);
 
 	}
 
-	public void senha1(String pass) {
-		password1.sendKeys(pass);
+	public void senha1() {
+		setText(password1,getPropertySettings("LevvMobile.data.senha"));
+		//password1.sendKeys(pass);
 	}
 
-	public void senha2(String pass) {
-		password2.sendKeys(pass);
+	public void senha2() {
+		setText(password2,getPropertySettings("LevvMobile.data.senha"));
+		//password2.sendKeys(pass);
 	}
 
 	public void botaoCadastrarCelular() {

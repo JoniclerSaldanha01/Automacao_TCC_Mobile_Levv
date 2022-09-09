@@ -19,10 +19,10 @@ public class LojistaSteps {
 
 	}
 
-	@Quando("preencho o campo (.*)")
-	public void preencho_o_campo(String nome) throws InterruptedException {
+	@Quando("preencho o campo Nome")
+	public void preencho_o_campo_Nome() throws InterruptedException {
 
-		cadastro.nome(nome);
+		cadastro.nome();
 		Thread.sleep(2000);
 
 	}
@@ -33,20 +33,20 @@ public class LojistaSteps {
 		cadastro.phone(int1);
 	}
 
-	@Quando("informo o (.*)")
-	public void informo_o_QAQA_gmail_com(String Email) {
-		cadastro.email(Email);
+	@Quando("informo o email")
+	public void informo_o_email() {
+		cadastro.email();
 
 	}
 
-	@Quando("informo a (.*)")
-	public void informo_a(String pass1) {
-		cadastro.senha1(pass1);
+	@Quando("informo a Senha")
+	public void informo_a_Senha() {
+		cadastro.senha1();
 	}
 
-	@Quando("confirmo a (.*)")
-	public void confirmo_a_senha(String pass2) throws InterruptedException {
-		cadastro.senha2(pass2);
+	@Quando("confirmo a Senha")
+	public void confirmo_a_Senha() throws InterruptedException {
+		cadastro.senha2();
 		Thread.sleep(2000);
 	}
 
