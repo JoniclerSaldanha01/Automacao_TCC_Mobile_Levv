@@ -2,6 +2,7 @@ package page;
 
 import static org.junit.Assert.*;
 import static utils.BasePage.setText;
+import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
 
 import java.awt.AWTException;
@@ -25,7 +26,6 @@ public class LojistaPage extends LojistaAttributes {
 // Insere Nome e SobreNome    
 	public void nome() {
 		setText(nameLastName,getPropertySettings("LevvMobile.data.nomeLojista"));
-		//nameLastName.sendKeys(name);
 
 	}
 
@@ -35,18 +35,16 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void email() {
 		setText(Email,getPropertySettings("LevvMobile.data.email"));
-		//Email.sendKeys(email);
 
 	}
 
 	public void senha1() {
 		setText(password1,getPropertySettings("LevvMobile.data.senha"));
-		//password1.sendKeys(pass);
-	}
+		}
 
 	public void senha2() {
 		setText(password2,getPropertySettings("LevvMobile.data.senha"));
-		//password2.sendKeys(pass);
+
 	}
 
 	public void botaoCadastrarCelular() {
@@ -118,5 +116,45 @@ public class LojistaPage extends LojistaAttributes {
 		Thread.sleep(12000);
 		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
+	
+	public void usuarioCadastrado() {
+		usuarioJaCadastrado.click();
+		driver.hideKeyboard();
+		setText(emailCadastrado,getPropertySettings("LevvMobile.data.email"));
+		setText(senhaCadastrada,getPropertySettings("LevvMobile.data.senha"));
+		logar.click();
 
+		
+	}
+	
+	public void produtoEnviar() throws InterruptedException {
+		eviarProduto.click();
+		Thread.sleep(3000);
+		permitir.click();
+	}
+	
+	public void preencherCampos() throws InterruptedException {
+		setText(descricaoItem,getPropertySettings("LevvMobile.data.descricaoItem"));
+		Thread.sleep(2000);
+		driver.hideKeyboard();
+		volume.click();
+		setText(enderecoColeta,getPropertySettings("LevvMobile.data.endercoColeta"));
+		setText(enderecoEntrega,getPropertySettings("LevvMobile.data.enderecoEntrega"));
+		setText(valorNegociado,getPropertySettings("LevvMobile.data.valorNegociado"));
+		valorNegociado.click();
+		driver.hideKeyboard();
+
+
+			
+		
+	}
+
+	
+	public void enviarPedido() throws InterruptedException {
+		btnEnviarPedido.click();
+		Thread.sleep(4000);
+		btnEnviarPedido.click();
+		confirmarValor.click();
+	}
+	
 }

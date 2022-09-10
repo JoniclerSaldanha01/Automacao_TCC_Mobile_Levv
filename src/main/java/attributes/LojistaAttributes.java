@@ -95,4 +95,58 @@ public class LojistaAttributes {
 
     @AndroidFindBy(id = "android:id/alertTitle")
     protected MobileElement falhaSistema;
+    
+    //////////////// Entrega /////////////////////////////
+    @AndroidFindBy(id = "com.example.levv:id/txtCadastrarLogar")
+    protected MobileElement usuarioJaCadastrado;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/editEmailCelularLoginFragment")
+    protected MobileElement emailCadastrado;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/editSenhaCelularLoginFragment")
+    protected MobileElement senhaCadastrada;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/btnCadastrarLogar")
+    protected MobileElement logar;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/btnEnviarProduto")
+    protected MobileElement eviarProduto;
+
+
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
+    protected MobileElement permitir;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/editDescricaoItem2")
+    protected MobileElement descricaoItem;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/rbVolumeMedio")
+    protected MobileElement volume;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/autoCompletarColeta")
+    protected MobileElement enderecoColeta;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/autoCompletarEntrega")
+    protected MobileElement enderecoEntrega;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/edtValorEstimado")
+    protected MobileElement valorNegociado;
+        
+
+    @AndroidFindBy(id = "com.example.levv:id/btnEnviarPedido")
+    protected MobileElement btnEnviarPedido;
+    
+    
+    @AndroidFindBy(id = "android:id/button1")
+    protected MobileElement confirmarValor;
+    
+    
 }

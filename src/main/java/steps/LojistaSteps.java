@@ -118,23 +118,30 @@ public class LojistaSteps {
 
 	// Produto Entrega
 	@Dado("que acesse o sistema com usuario cadastrado")
-	public void que_acesse_o_sistema_com_usuario_cadastrado() {
+	public void que_acesse_o_sistema_com_usuario_cadastrado() throws InterruptedException {
+		Thread.sleep(3000);
+		driver.hideKeyboard();
+		Thread.sleep(2000);
+		cadastro.usuarioCadastrado();
 
 	}
 
 	@Dado("acesso enviar produto")
-	public void acesso_enviar_produto() {
-
+	public void acesso_enviar_produto() throws InterruptedException {
+		cadastro.produtoEnviar();
+		Thread.sleep(3000);
 	}
 
 	@Quando("preencho os campos enviar produto")
-	public void preencho_os_campos_enviar_produto() {
-
+	public void preencho_os_campos_enviar_produto() throws InterruptedException {
+		cadastro.preencherCampos();
+		Thread.sleep(22000);
 	}
 
 	@Quando("clico em enviar pedido")
-	public void clico_em_enviar_pedido() {
-
+	public void clico_em_enviar_pedido() throws InterruptedException {
+		cadastro.enviarPedido();
+		
 	}
 
 	@Entao("valido pedido em Pendentes")
