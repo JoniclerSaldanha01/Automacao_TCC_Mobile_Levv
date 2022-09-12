@@ -87,15 +87,19 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
-	public void BotaoCadastrarLojista() {
+	public void BotaoCadastrarLojista() throws InterruptedException {
 		cadastrarLojista.click();
-		assertTrue(cadastroLojistaValidado.isDisplayed());
-		cadastroLojistaValidado.click();
+		//assertTrue(cadastroLojistaValidado.isDisplayed());
+		//cadastroLojistaValidado.click();
+		System.out.println("PERMITIR");
+		Thread.sleep(2000);
+		permitir.click();
 	}
 
 	// CADASTRO ENDERECO LOJISTA
 
 	public void CadastrarEndecoLojista() throws InterruptedException {
+
 		logradouroLojista.setValue("Praça da Sé");
 		numero.setValue("s/nº");
 		complemento.setValue("Ponto comercial");
@@ -113,7 +117,7 @@ public class LojistaPage extends LojistaAttributes {
 		btnCadastrarEndereco.click();
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
-		Thread.sleep(12000);
+		Thread.sleep(22000);
 		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 	
@@ -131,6 +135,7 @@ public class LojistaPage extends LojistaAttributes {
 		eviarProduto.click();
 		Thread.sleep(3000);
 		permitir.click();
+		Thread.sleep(8000);
 	}
 	
 	public void preencherCampos() throws InterruptedException {
@@ -154,7 +159,18 @@ public class LojistaPage extends LojistaAttributes {
 		btnEnviarPedido.click();
 		Thread.sleep(4000);
 		btnEnviarPedido.click();
+		Thread.sleep(3000);
 		confirmarValor.click();
+		
 	}
 	
+	
+	public void validarPedido() throws InterruptedException {
+		Thread.sleep(6000);
+		acompanharEntrega.click();
+		Thread.sleep(2000);
+		abaPendentes.click();
+		assertTrue(numeroPedido.isDisplayed());
+		Thread.sleep(6000);
+	}
 }

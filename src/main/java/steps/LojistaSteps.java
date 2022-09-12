@@ -145,8 +145,9 @@ public class LojistaSteps {
 	}
 
 	@Entao("valido pedido em Pendentes")
-	public void valido_pedido_em_Pendentes() {
-
+	public void valido_pedido_em_Pendentes() throws InterruptedException {
+		cadastro.validarPedido();
+		
 	}
 
 }

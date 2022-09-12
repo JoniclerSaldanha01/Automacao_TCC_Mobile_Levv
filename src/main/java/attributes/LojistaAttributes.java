@@ -149,4 +149,17 @@ public class LojistaAttributes {
     protected MobileElement confirmarValor;
     
     
+    @AndroidFindBy(id = "com.example.levv:id/btnAcompanharProduto")
+    protected MobileElement acompanharEntrega;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/btnPendentes")
+    protected MobileElement abaPendentes;
+    
+    
+    @AndroidFindBy(id = "com.example.levv:id/txtNumeroDoPedido")
+    protected MobileElement numeroPedido;
+    
+    
+    
 }
