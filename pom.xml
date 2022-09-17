@@ -3,6 +3,13 @@
   <groupId>br.com.automacao</groupId>
   <artifactId>Automacao_LEVV</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  	<name>CucumberExtentReport4</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+  
+  
+  
   <dependencies>
     <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
     <dependency>
@@ -17,25 +24,39 @@
       <version>4.13</version>
       <scope>test</scope>
     </dependency>
+    
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>4.7.2</version>
+      <version>5.7.0</version>
     </dependency>
     
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>4.0.9</version>
-        </dependency>
+    		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>5.7.0</version>
+		</dependency>
+    
+    	<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+    		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber5-adapter</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
         
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>4.7.2</version>
+      <version>5.7.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
     <dependency>
@@ -49,7 +70,34 @@
       <version>4.13</version>
       <scope>compile</scope>
     </dependency>
+
+    		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+				<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>13.0.0</version>
+		</dependency>
   </dependencies>
+  
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M3</version>
+					<configuration>
+						<includes>**/*Runner.java</includes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+  
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>

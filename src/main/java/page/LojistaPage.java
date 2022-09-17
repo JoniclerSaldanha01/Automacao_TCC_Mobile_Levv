@@ -29,8 +29,9 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
-	public void phone(String number) {
-		NumberPhone.sendKeys(number);
+	public void phone() {
+		setText(NumberPhone,getPropertySettings("LevvMobile.data.celular"));
+		
 	}
 
 	public void email() {
@@ -62,28 +63,33 @@ public class LojistaPage extends LojistaAttributes {
 
 	// Cadastro Tela Lojista
 
-	public void dataNascimento(String dtNasc) {
-		diaMesAno.sendKeys(dtNasc);
+	public void dataNascimento() {
+		setText(diaMesAno,getPropertySettings("LevvMobile.data.dataNascimento"));
+	
 
 	}
 
-	public void cpfLojista(String cpf) {
-		cpfLojista.sendKeys(cpf);
+	public void cpfLojista() {
+		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpf"));
+		
 
 	}
 
-	public void cnpjLojista(String cnpj) {
-		lojistaCnpj.sendKeys(cnpj);
+	public void cnpjLojista() {
+		setText(lojistaCnpj,getPropertySettings("LevvMobile.data.cnpj"));
+		
 
 	}
 
-	public void empresaNome(String nomeEmpresa) {
-		nomeEmp.sendKeys(nomeEmpresa);
+	public void empresaNome() {
+		setText(nomeEmp,getPropertySettings("LevvMobile.data.nomeEmpresa"));
+	
 
 	}
 
-	public void nomeFantasia(String nomeFant) {
-		nomeFantasia.sendKeys(nomeFant);
+	public void nomeFantasia() {
+		setText(nomeFantasia,getPropertySettings("LevvMobile.data.nomeFantasia"));
+		
 
 	}
 

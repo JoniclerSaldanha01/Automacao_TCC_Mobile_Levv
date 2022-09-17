@@ -27,10 +27,10 @@ public class LojistaSteps {
 
 	}
 
-	@Quando("informo (.*) com DDD")
-	public void informo_com_DDD(String int1) {
+	@Quando("informo Celular com DDD")
+	public void informo_Celular_com_DDD() {
 		driver.hideKeyboard();
-		cadastro.phone(int1);
+		cadastro.phone();
 	}
 
 	@Quando("informo o email")
@@ -75,31 +75,30 @@ public class LojistaSteps {
 		}
 	}
 
-	@Quando("informo (.*)  (.*) e (.*)")
-	public void informo_dataNascimento_cpf_e_cnpj(String dataNascimento, String cpf, String cnpj)
-			throws InterruptedException {
+	@Quando("informo dataNascimento  cpf e cnpj")
+	public void informo_dataNascimento_cpf_e_cnpj()			throws InterruptedException {
 		driver.hideKeyboard();
-		cadastro.dataNascimento(dataNascimento);
-		cadastro.cpfLojista(cpf);
-		cadastro.cnpjLojista(cnpj);
+		cadastro.dataNascimento();
+		cadastro.cpfLojista();
+		cadastro.cnpjLojista();
 		Thread.sleep(4000);
 	}
 
-	@Quando("informo (.*) lojista")
-	public void informo_Quality_Assurence_LTDA_lojista(String NomeEmpresa) {
-		cadastro.empresaNome(NomeEmpresa);
+	@Quando("informo NomeEmpresa lojista")
+	public void informo__lojista() {
+		cadastro.empresaNome();
 	}
 
-	@Quando("informo (.*) lojista nome fantasia")
-	public void informo_Testes_cia_lojista_nome_fantasia(String NomeFantasia) throws InterruptedException {
-		cadastro.nomeFantasia(NomeFantasia);
+	@Quando("informo NomeFantasia lojista nome fantasia")
+	public void informo_NomeFantasia_lojista_nome_fantasia() throws InterruptedException {
+		cadastro.nomeFantasia();
 		Thread.sleep(13000);
 	}
 
 	@Quando("cadastro usuario lojista")
 	public void cadastro_usuario_lojista() throws InterruptedException {
 		cadastro.BotaoCadastrarLojista();
-		Thread.sleep(18000);
+		Thread.sleep(6000);
 	}
 
 	@Quando("preencho a tela de cadastro de endereco")
@@ -112,7 +111,7 @@ public class LojistaSteps {
 	public void cadastro_com_sucesso_o_endereco() throws InterruptedException, AWTException {
 		driver.hideKeyboard();
 		cadastro.botaoCadastrarEndereco();
-		Thread.sleep(18000);
+		Thread.sleep(8000);
 
 	}
 
