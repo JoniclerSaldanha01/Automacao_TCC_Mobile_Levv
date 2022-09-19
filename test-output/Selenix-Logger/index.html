@@ -56,6 +56,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -99,8 +107,8 @@
 									</span>
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
 										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -134,20 +142,20 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">09.17.2022 15:23:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">09.19.2022 20:10:19</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[Cadastro de usuario lojista no sistema Levv] started</span>
 												
 											</div>
-											<div class="st pass test l1" 
+											<div class="st fail test l1" 
 												tags="@CadastrarLojista"
 												devices="">
-												<span class="tt">09.17.2022 15:23:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">09.19.2022 20:10:19</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">|---[Cadastrar novo usuario Lojista ao sistema] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @CadastrarLojista</span>
@@ -158,26 +166,28 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">09.17.2022 15:23:23</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.fecharApp(io.cucumber.java.Scenario)] started</span>
+												<span class="tt">09.19.2022 20:10:19</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.tearDown(io.cucumber.java.Scenario)] started</span>
 												
 												<div class="st info">
-													<span class="tt">09.17.2022 15:23:23</span>&nbsp;
+													<span class="tt">09.19.2022 20:10:19</span>&nbsp;
 													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.fecharApp(io.cucumber.java.Scenario)]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.tearDown(io.cucumber.java.Scenario)]</span>
 													
-													<span class="td">this is my failure message</span>
+													<span class="td">Caso de Teste finalizado com Falha!!!</span>
 												</div>
-												<div class="st info">
-													<span class="tt">09.17.2022 15:23:24</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.fecharApp(io.cucumber.java.Scenario)]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='../embedded1.png' src='../embedded1.png'></span>
-													<span class="td"></span>
+												<div class="st fail">
+													<span class="tt">09.19.2022 20:10:19</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[steps.Hooks.tearDown(io.cucumber.java.Scenario)]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException
+	at steps.Hooks.tearDown(Hooks.java:39)
+</textarea></span>
 												</div>
 											</div>
 											</div>

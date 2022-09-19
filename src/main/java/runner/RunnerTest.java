@@ -14,19 +14,7 @@ import org.junit.runner.RunWith;
 	dryRun = false, 
 	monochrome = true
 	)
-/*
-@RunWith(Cucumber.class)
-@CucumberOptions(
-       // plugin = {"pretty"},
-        //features = "src\\main\\resources\\features",
-        glue = "steps",
-        tags = {"@CadastrarLojista"},
-        snippets = SnippetType.CAMELCASE,
-       // monochrome = true,
-        //dryRun = false
 
-)
-*/
 public class RunnerTest {
 
 }

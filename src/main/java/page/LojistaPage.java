@@ -4,12 +4,12 @@ import static org.junit.Assert.*;
 import static utils.BasePage.setText;
 import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
-
 import java.awt.AWTException;
 import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import steps.Hooks;
 
 public class LojistaPage extends LojistaAttributes {
 
@@ -119,12 +119,12 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
-
+		
 		btnCadastrarEndereco.click();
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
 		Thread.sleep(22000);
-		assertEquals(enderecoLojistaValidado, falhaSistema);
+		assertEquals(enderecoLojistaValidado, Hooks.driver.getTitle());
 	}
 	
 	public void usuarioCadastrado() {
