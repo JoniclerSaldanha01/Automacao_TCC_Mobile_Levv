@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src\\main\\resources\\features", 
 	glue = { "steps" }, 
-	tags = "@CadastrarLojista",
+	tags = "@EnviarProduto",
 	plugin = { "pretty", "html:test-output", "json:target/cucumber.json",
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 	
 	dryRun = false, 
