@@ -34,166 +34,102 @@ public class LojistaPage extends LojistaAttributes {
 
 // Insere Nome e SobreNome    
 	public void nome() {
-		try {
-
+		
 			setText(nameLastName, getPropertySettings("LevvMobile.data.nomeLojista"));
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
+	
 	}
 
 	public void phone() {
-		try {
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
+	
 		setText(NumberPhone, getPropertySettings("LevvMobile.data.celular"));
 
 	}
 
 	public void email() {
-		try {
-
+		
 			setText(Email, getPropertySettings("LevvMobile.data.email"));
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void senha1() {
-		try {
-
+		
 			setText(password1, getPropertySettings("LevvMobile.data.senha"));
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void senha2() {
-		try {
-
+		
 			setText(password2, getPropertySettings("LevvMobile.data.senha"));
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void botaoCadastrarCelular() {
-		try {
-
+		
 			botaoCadastrar.click();
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void cadastroValidador() {
-		try {
-
+		
 			assertTrue(validarCadastro.isDisplayed());
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void lojista() {
-		try {
-
+		
 			selecionaLojista.click();
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	// Cadastro Tela Lojista
 
 	public void dataNascimento() {
-		try {
-
+		
 			setText(diaMesAno, getPropertySettings("LevvMobile.data.dataNascimento"));
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void cpfLojista() {
-		try {
-
+		
 			setText(cpfLojista, getPropertySettings("LevvMobile.data.cpf"));
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void cnpjLojista() {
-		try {
-
+		
 			setText(lojistaCnpj, getPropertySettings("LevvMobile.data.cnpj"));
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void empresaNome() {
-		try {
-
-			setText(nomeEmp, getPropertySettings("LevvMobile.data.nomeEmpresa"));
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
+		
+			setText(nomeEmp, getPropertySettings("LevvMobile.data.nomeEmpresa"));	
 
 	}
 
 	public void nomeFantasia() {
-		try {
-
+		
 			setText(nomeFantasia, getPropertySettings("LevvMobile.data.nomeFantasia"));
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
+	
 	}
 
 	public void BotaoCadastrarLojista() throws InterruptedException {
-		try {
-
+		
 			cadastrarLojista.click();
 			System.out.println("PERMITIR");
 			Thread.sleep(2000);
 			permitir.click();
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	// CADASTRO ENDERECO LOJISTA
 
 	public void CadastrarEndecoLojista() throws InterruptedException {
-		try {
-
+		
 			logradouroLojista.setValue("Praça da Sé");
 			numero.setValue("s/nº");
 			complemento.setValue("Ponto comercial");
@@ -205,59 +141,40 @@ public class LojistaPage extends LojistaAttributes {
 			Thread.sleep(2000);
 			estado.click();
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
 	}
 
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
-		try {
-
+		
 			btnCadastrarEndereco.click();
 			assertTrue(enderecoLojistaValidado.isDisplayed());
 			System.out.println("VALIDADO CADASTRO LOJISTA");
 			Thread.sleep(22000);
 			assertEquals(enderecoLojistaValidado, Hooks.driver.getTitle());
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
 	}
 
 	public void usuarioCadastrado() {
-		try {
-
+		
 			usuarioJaCadastrado.click();
 			driver.hideKeyboard();
 			setText(emailCadastrado, getPropertySettings("LevvMobile.data.email"));
 			setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senha"));
 			logar.click();
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
 	}
 
 	public void produtoEnviar() throws InterruptedException {
-		try {
 
-			eviarProduto.click();
+		    eviarProduto.click();
 			Thread.sleep(3000);
 			permitir.click();
 			Thread.sleep(8000);
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
 	public void preencherCampos() throws InterruptedException {
-		try {
-
+		
 			setText(descricaoItem, getPropertySettings("LevvMobile.data.descricaoItem"));
 			Thread.sleep(2000);
 			driver.hideKeyboard();
@@ -268,9 +185,6 @@ public class LojistaPage extends LojistaAttributes {
 			valorNegociado.click();
 			driver.hideKeyboard();
 
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 
@@ -292,8 +206,7 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void validarPedido() throws InterruptedException {
-		try {
-
+		
 			Thread.sleep(6000);
 			acompanharEntrega.click();
 			Thread.sleep(2000);
@@ -305,10 +218,6 @@ public class LojistaPage extends LojistaAttributes {
 			}
 
 			Thread.sleep(6000);
-
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
 
 	}
 }
