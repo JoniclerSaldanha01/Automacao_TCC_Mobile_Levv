@@ -25,7 +25,8 @@ public class LojistaPage extends LojistaAttributes {
 		try {
 
 			assertTrue(nameLastName.isDisplayed());
-
+            // EXEMPLO WEB
+			//Assert.assertEquals("Google", Hooks.driver.getTitle());
 		} catch (Exception e) {
 			System.err.println("Nao foi possivel acessar: " + e);
 		}
