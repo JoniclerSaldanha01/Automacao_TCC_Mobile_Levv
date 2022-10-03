@@ -31,13 +31,13 @@ public class Hooks {
 				TakesScreenshot ts = (TakesScreenshot) driver;
 				byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
 				scenario.attach(screenshot, "image/png", screenshotName);
-				driver.quit();
+
 			}
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
-		
+		driver.quit();
 	}
 
     /*
