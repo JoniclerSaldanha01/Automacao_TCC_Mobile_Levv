@@ -2,5 +2,5 @@
 * Pré requisitos:
 * java 1.8
 * Appium
-* Android Studio
-* Intellij
+* Android Studio (para emular um Device).
+* Intellij (Versões a partir de 2020, pode emular um Device na própria IDE).
