@@ -16,7 +16,8 @@ import io.cucumber.testng.CucumberOptions;
         },
         features = {"src\\main\\resources\\features"},
         glue = {"steps"},
-        tags = "@EnviarProduto"
+        tags = "@Test"
+        
 )
 
 public class RunnerTest extends AbstractTestNGCucumberTests {

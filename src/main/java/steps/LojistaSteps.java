@@ -27,10 +27,10 @@ public class LojistaSteps {
 
 	}
 
-	@Quando("informo (.*) com DDD")
-	public void informo_com_DDD(String int1) {
+	@Quando("informo Celular com DDD")
+	public void informo_Celular_com_DDD() {
 		driver.hideKeyboard();
-		cadastro.phone(int1);
+		cadastro.phone();
 	}
 
 	@Quando("informo o email")
@@ -75,24 +75,22 @@ public class LojistaSteps {
 		}
 	}
 
-	@Quando("informo (.*)  (.*) e (.*)")
-	public void informo_dataNascimento_cpf_e_cnpj(String dataNascimento, String cpf, String cnpj)
-			throws InterruptedException {
-		driver.hideKeyboard();
-		cadastro.dataNascimento(dataNascimento);
-		cadastro.cpfLojista(cpf);
-		cadastro.cnpjLojista(cnpj);
+	@Quando("informo dataNascimento  cpf e cnpj")
+	public void informo_dataNascimento_cpf_e_cnpj()	throws InterruptedException {		
+		cadastro.dataNascimento();
+		cadastro.cpfLojista();
+		cadastro.cnpjLojista();
 		Thread.sleep(4000);
 	}
 
-	@Quando("informo (.*) lojista")
-	public void informo_Quality_Assurence_LTDA_lojista(String NomeEmpresa) {
-		cadastro.empresaNome(NomeEmpresa);
+	@Quando("informo Nome Empresa lojista")
+	public void informo_Nome_Empresa_lojista() {
+		cadastro.empresaNome();
 	}
 
-	@Quando("informo (.*) lojista nome fantasia")
-	public void informo_Testes_cia_lojista_nome_fantasia(String NomeFantasia) throws InterruptedException {
-		cadastro.nomeFantasia(NomeFantasia);
+	@Quando("informo Nome Fantasia lojista nome fantasia")
+	public void informo_Nome_fantasia() throws InterruptedException {
+		cadastro.nomeFantasia();
 		Thread.sleep(13000);
 	}
 
@@ -110,7 +108,7 @@ public class LojistaSteps {
 
 	@Entao("cadastro com sucesso o endereco")
 	public void cadastro_com_sucesso_o_endereco() throws InterruptedException, AWTException {
-		driver.hideKeyboard();
+
 		cadastro.botaoCadastrarEndereco();
 		Thread.sleep(8000);
 
@@ -119,9 +117,7 @@ public class LojistaSteps {
 	// Produto Entrega
 	@Dado("que acesse o sistema com usuario cadastrado")
 	public void que_acesse_o_sistema_com_usuario_cadastrado() throws InterruptedException {
-		Thread.sleep(3000);
-		driver.hideKeyboard();
-		Thread.sleep(2000);
+		Thread.sleep(3000);				
 		cadastro.usuarioCadastrado();
 
 	}

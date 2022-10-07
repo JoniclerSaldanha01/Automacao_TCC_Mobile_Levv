@@ -1,5 +1,6 @@
 package steps;
 
+
 import io.cucumber.java.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -10,12 +11,12 @@ public class Hooks {
 
     
     @Before
-    public static void setUp() throws Exception {
+	public static void setUp() throws Exception {
         acessarApp();
     }
 
     @After
-    public void fecharApp(Scenario cenario) throws Exception{
+	public void fecharApp(Scenario cenario) throws Exception{
      //  Utils.gerarScreenShot(cenario);
         driver.quit();
     }
