@@ -10,4 +10,4 @@
 
 <h2> Sobre o Projeto</h2>
 <h4> A automação de teste de software do sistema Levv 1.0 é desenvolvida para o trabalho de conclusão</h4>
-<p><h4> do curso de Análise e Desenvolvimento de Sistemas Campus Tubarão SC, ano 2022</p></h4>
+<h4> do curso de Análise e Desenvolvimento de Sistemas Campus Tubarão SC, ano 2022.</h4>
