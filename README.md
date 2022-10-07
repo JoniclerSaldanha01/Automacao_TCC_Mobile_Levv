@@ -3,5 +3,7 @@
 - [x] java 1.8
 - [x] Appium
 - [x] Node js
+- [x] TestNg
+- [X] Cucumber Report
 - [x] Android Studio (para emular um Device).
 - [x] Intellij (Versões a partir de 2020, pode emular um Device na própria IDE).
