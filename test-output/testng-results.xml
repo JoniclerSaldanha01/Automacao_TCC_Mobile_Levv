@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="99939" started-at="2022-10-07T15:22:29 BRT" finished-at="2022-10-07T15:24:09 BRT">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerTest@fad74ee]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="99939" started-at="2022-10-07T15:22:29 BRT" finished-at="2022-10-07T15:24:09 BRT">
+      <class name="runner.RunnerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.RunnerTest@fad74ee]" name="setUpClass" is-config="true" duration-ms="1085" started-at="2022-10-07T15:22:29 BRT" finished-at="2022-10-07T15:22:30 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerTest@fad74ee]" name="runScenario" duration-ms="98576" started-at="2022-10-07T15:22:30 BRT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-10-07T15:24:09 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["enviar produto para entrega"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Cadastro de usuario lojista no sistema Levv]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.RunnerTest@fad74ee]" name="tearDownClass" is-config="true" duration-ms="224" started-at="2022-10-07T15:24:09 BRT" finished-at="2022-10-07T15:24:09 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.RunnerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

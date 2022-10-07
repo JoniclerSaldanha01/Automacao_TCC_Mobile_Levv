@@ -4,13 +4,12 @@ import static org.junit.Assert.*;
 import static utils.BasePage.setText;
 import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
+
 import java.awt.AWTException;
-import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import steps.Hooks;
 
 public class LojistaPage extends LojistaAttributes {
 
@@ -19,206 +18,159 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
-	
 // Valida tela de cadastro
 	public void validarTelaRegistro() {
-		try {
-
-			assertTrue(nameLastName.isDisplayed());
-            // EXEMPLO WEB
-			//Assert.assertEquals("Google", Hooks.driver.getTitle());
-		} catch (Exception e) {
-			System.err.println("Nao foi possivel acessar: " + e);
-		}
-
+		assertTrue(nameLastName.isDisplayed());
 	}
 
 // Insere Nome e SobreNome    
 	public void nome() {
-		
-			setText(nameLastName, getPropertySettings("LevvMobile.data.nomeLojista"));
-	
+		setText(nameLastName,getPropertySettings("LevvMobile.data.nomeLojista"));
+
 	}
 
-	public void phone() {
-	
-		setText(NumberPhone, getPropertySettings("LevvMobile.data.celular"));
-
+	public void phone(String number) {
+		NumberPhone.sendKeys(number);
 	}
 
 	public void email() {
-		
-			setText(Email, getPropertySettings("LevvMobile.data.email"));
+		setText(Email,getPropertySettings("LevvMobile.data.email"));
 
 	}
 
 	public void senha1() {
-		
-			setText(password1, getPropertySettings("LevvMobile.data.senha"));
-
-	}
+		setText(password1,getPropertySettings("LevvMobile.data.senha"));
+		}
 
 	public void senha2() {
-		
-			setText(password2, getPropertySettings("LevvMobile.data.senha"));
-
+		setText(password2,getPropertySettings("LevvMobile.data.senha"));
 
 	}
 
 	public void botaoCadastrarCelular() {
-		
-			botaoCadastrar.click();
-
-
+		botaoCadastrar.click();
 	}
 
 	public void cadastroValidador() {
-		
-			assertTrue(validarCadastro.isDisplayed());
-
+		assertTrue(validarCadastro.isDisplayed());
 	}
 
 	public void lojista() {
-		
-			selecionaLojista.click();
+		selecionaLojista.click();
 
 	}
 
 	// Cadastro Tela Lojista
 
-	public void dataNascimento() {
-		
-			setText(diaMesAno, getPropertySettings("LevvMobile.data.dataNascimento"));
+	public void dataNascimento(String dtNasc) {
+		diaMesAno.sendKeys(dtNasc);
 
 	}
 
-	public void cpfLojista() {
-		
-			setText(cpfLojista, getPropertySettings("LevvMobile.data.cpf"));
-
+	public void cpfLojista(String cpf) {
+		cpfLojista.sendKeys(cpf);
 
 	}
 
-	public void cnpjLojista() {
-		
-			setText(lojistaCnpj, getPropertySettings("LevvMobile.data.cnpj"));
+	public void cnpjLojista(String cnpj) {
+		lojistaCnpj.sendKeys(cnpj);
 
 	}
 
-	public void empresaNome() {
-		
-			setText(nomeEmp, getPropertySettings("LevvMobile.data.nomeEmpresa"));	
+	public void empresaNome(String nomeEmpresa) {
+		nomeEmp.sendKeys(nomeEmpresa);
 
 	}
 
-	public void nomeFantasia() {
-		
-			setText(nomeFantasia, getPropertySettings("LevvMobile.data.nomeFantasia"));
-	
+	public void nomeFantasia(String nomeFant) {
+		nomeFantasia.sendKeys(nomeFant);
+
 	}
 
 	public void BotaoCadastrarLojista() throws InterruptedException {
-		
-			cadastrarLojista.click();
-			System.out.println("PERMITIR");
-			Thread.sleep(2000);
-			permitir.click();
-
-
+		cadastrarLojista.click();
+		//assertTrue(cadastroLojistaValidado.isDisplayed());
+		//cadastroLojistaValidado.click();
+		System.out.println("PERMITIR");
+		Thread.sleep(2000);
+		permitir.click();
 	}
 
 	// CADASTRO ENDERECO LOJISTA
 
 	public void CadastrarEndecoLojista() throws InterruptedException {
-		
-			logradouroLojista.setValue("Praça da Sé");
-			numero.setValue("s/nº");
-			complemento.setValue("Ponto comercial");
-			lojaTipo.click();
-			cep.setValue("01018-010");
-			bairro.setValue("Centro Histórico de São Paulo");
-			cidade.setValue("São Paulo");
-			estado.setValue("São Paulo");
-			Thread.sleep(2000);
-			estado.click();
 
+		logradouroLojista.setValue("Praça da Sé");
+		numero.setValue("s/nº");
+		complemento.setValue("Ponto comercial");
+		lojaTipo.click();
+		cep.setValue("01018-010");
+		bairro.setValue("Centro Histórico de São Paulo");
+		cidade.setValue("São Paulo");
+		estado.setValue("São Paulo");
+		Thread.sleep(2000);
+		estado.click();
 	}
 
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
-		
-			btnCadastrarEndereco.click();
-			assertTrue(enderecoLojistaValidado.isDisplayed());
-			System.out.println("VALIDADO CADASTRO LOJISTA");
-			Thread.sleep(22000);
-			assertEquals(enderecoLojistaValidado, Hooks.driver.getTitle());
 
+		btnCadastrarEndereco.click();
+		assertTrue(enderecoLojistaValidado.isDisplayed());
+		System.out.println("VALIDADO CADASTRO LOJISTA");
+		Thread.sleep(22000);
+		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
-
-	public void usuarioCadastrado() {
-		
-			usuarioJaCadastrado.click();
-			driver.hideKeyboard();
-			setText(emailCadastrado, getPropertySettings("LevvMobile.data.email"));
-			setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senha"));
-			logar.click();
-
-	}
-
-	public void produtoEnviar() throws InterruptedException {
-
-		    eviarProduto.click();
-			Thread.sleep(3000);
-			permitir.click();
-			Thread.sleep(8000);
-
-
-	}
-
-	public void preencherCampos() throws InterruptedException {
-		
-			setText(descricaoItem, getPropertySettings("LevvMobile.data.descricaoItem"));
-			Thread.sleep(2000);
-			driver.hideKeyboard();
-			volume.click();
-			setText(enderecoColeta, getPropertySettings("LevvMobile.data.endercoColeta"));
-			setText(enderecoEntrega, getPropertySettings("LevvMobile.data.enderecoEntrega"));
-			setText(valorNegociado, getPropertySettings("LevvMobile.data.valorNegociado"));
-			valorNegociado.click();
-			driver.hideKeyboard();
-
-
-	}
-
-	public void enviarPedido() throws InterruptedException {
-		
-			btnEnviarPedido.click();
-			Thread.sleep(4000);
-
-			if (confirmarValor.isDisplayed()) {
-				System.out.println("Clicar em SIM");
-				confirmarValor.click();
-			} else {
-				
-				Hooks.driver.getTitle();
-			
-			}
 	
+	public void usuarioCadastrado() {
+		usuarioJaCadastrado.click();
+		driver.hideKeyboard();
+		setText(emailCadastrado,getPropertySettings("LevvMobile.data.email"));
+		setText(senhaCadastrada,getPropertySettings("LevvMobile.data.senha"));
+		logar.click();
 
+		
+	}
+	
+	public void produtoEnviar() throws InterruptedException {
+		eviarProduto.click();
+		Thread.sleep(3000);
+		permitir.click();
+		Thread.sleep(8000);
+	}
+	
+	public void preencherCampos() throws InterruptedException {
+		setText(descricaoItem,getPropertySettings("LevvMobile.data.descricaoItem"));
+		Thread.sleep(2000);
+		driver.hideKeyboard();
+		volume.click();
+		setText(enderecoColeta,getPropertySettings("LevvMobile.data.endercoColeta"));
+		setText(enderecoEntrega,getPropertySettings("LevvMobile.data.enderecoEntrega"));
+		setText(valorNegociado,getPropertySettings("LevvMobile.data.valorNegociado"));
+		valorNegociado.click();
+		//driver.hideKeyboard();
+
+
+			
+		
 	}
 
-	public void validarPedido() throws InterruptedException {
+	
+	public void enviarPedido() throws InterruptedException {
+		btnEnviarPedido.click();
+		//Thread.sleep(4000);
+		//btnEnviarPedido.click();
+		Thread.sleep(3000);
+		confirmarValor.click();
 		
-			Thread.sleep(6000);
-			acompanharEntrega.click();
-			Thread.sleep(2000);
-			abaPendentes.click();
-			if (numeroPedido.isDisplayed()) {
-				System.out.println("Pedido Validado");
-			} else {
-				 Hooks.driver.getTitle();
-			}
-
-			Thread.sleep(6000);
-
+	}
+	
+	
+	public void validarPedido() throws InterruptedException {
+		Thread.sleep(6000);
+		acompanharEntrega.click();
+		Thread.sleep(2000);
+		abaPendentes.click();
+		assertTrue(numeroPedido.isDisplayed());
+		Thread.sleep(6000);
 	}
 }

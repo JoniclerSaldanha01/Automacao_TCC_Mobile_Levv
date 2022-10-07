@@ -27,10 +27,10 @@ public class LojistaSteps {
 
 	}
 
-	@Quando("informo Celular com DDD")
-	public void informo_Celular_com_DDD() {
+	@Quando("informo (.*) com DDD")
+	public void informo_com_DDD(String int1) {
 		driver.hideKeyboard();
-		cadastro.phone();
+		cadastro.phone(int1);
 	}
 
 	@Quando("informo o email")
@@ -75,23 +75,24 @@ public class LojistaSteps {
 		}
 	}
 
-	@Quando("informo dataNascimento  cpf e cnpj")
-	public void informo_dataNascimento_cpf_e_cnpj()			throws InterruptedException {
+	@Quando("informo (.*)  (.*) e (.*)")
+	public void informo_dataNascimento_cpf_e_cnpj(String dataNascimento, String cpf, String cnpj)
+			throws InterruptedException {
 		driver.hideKeyboard();
-		cadastro.dataNascimento();
-		cadastro.cpfLojista();
-		cadastro.cnpjLojista();
+		cadastro.dataNascimento(dataNascimento);
+		cadastro.cpfLojista(cpf);
+		cadastro.cnpjLojista(cnpj);
 		Thread.sleep(4000);
 	}
 
-	@Quando("informo NomeEmpresa lojista")
-	public void informo__lojista() {
-		cadastro.empresaNome();
+	@Quando("informo (.*) lojista")
+	public void informo_Quality_Assurence_LTDA_lojista(String NomeEmpresa) {
+		cadastro.empresaNome(NomeEmpresa);
 	}
 
-	@Quando("informo NomeFantasia lojista nome fantasia")
-	public void informo_NomeFantasia_lojista_nome_fantasia() throws InterruptedException {
-		cadastro.nomeFantasia();
+	@Quando("informo (.*) lojista nome fantasia")
+	public void informo_Testes_cia_lojista_nome_fantasia(String NomeFantasia) throws InterruptedException {
+		cadastro.nomeFantasia(NomeFantasia);
 		Thread.sleep(13000);
 	}
 
