@@ -4,6 +4,21 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class ClienteAttributes {
+	
+	@AndroidFindBy(id = "com.example.levv:id/editNomeCadastrarFragment")
+	protected MobileElement nameLastName;
+    
+    @AndroidFindBy(id = "com.example.levv:id/editCelularCadastrarFragment")
+    protected MobileElement NumberPhone;
+    
+    @AndroidFindBy(id = "com.example.levv:id/editEmailCadastrarFragment")
+    protected MobileElement Email;
+
+    @AndroidFindBy(id = "com.example.levv:id/editSenha1CadastrarFragment")
+    protected MobileElement password1;
+    
+    @AndroidFindBy(id = "com.example.levv:id/editSenha2CadastrarFragment")
+    protected MobileElement password2;
 
     @AndroidFindBy(id = "com.example.levv:id/rbCliente")
     protected MobileElement cliente;
@@ -17,7 +32,7 @@ public class ClienteAttributes {
     @AndroidFindBy(id = "com.example.levv:id/BtnUserCad")
     protected MobileElement cadastrarCliente;
 
-    @AndroidFindBy(id = "com.android.packageinstaller:id/permission_allow_button")
+    @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     protected MobileElement permitirLocalizacao;
 
     @AndroidFindBy(id = "com.example.levv:id/editLogradouro")

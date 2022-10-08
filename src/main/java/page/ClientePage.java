@@ -15,6 +15,26 @@ public class ClientePage extends ClienteAttributes {
 
 	}
 
+	public void nomeCliente() {
+		setText(nameLastName,getPropertySettings("LevvMobile.data.NomeCliente"));
+	}
+	
+	public void celular() {
+		setText(NumberPhone,getPropertySettings("LevvMobile.data.Celular"));
+	}
+	
+	public void emailCliente() {
+		setText(Email,getPropertySettings("LevvMobile.data.email"));
+	}
+	
+	public void senha1() {
+		setText(password1,getPropertySettings("LevvMobile.data.Senha1"));
+	}
+	
+	public void confirmarSenha() {
+		setText(password2,getPropertySettings("LevvMobile.data.Senha1"));
+	}
+	
 	public void selecionaClente() {
 
 		try {
@@ -25,20 +45,16 @@ public class ClientePage extends ClienteAttributes {
 		}
 	}
 
-	public void dataEcpf(String dt, String cpf) {
-
-		try {
-			diaMesAno.sendKeys(dt);
-			cpfLojista.sendKeys(cpf);
-			Thread.sleep(6000);
-		} catch (Exception e) {
-
-		}
+	public void dataEcpf() throws InterruptedException {
+		setText(diaMesAno,getPropertySettings("LevvMobile.data.dataNascimento"));
+		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpf"));
+		Thread.sleep(6000);
+		
 	}
 
 	public void BotaoCadastrarCliente() throws InterruptedException {
 		cadastrarCliente.click();
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		permitirLocalizacao.click();
 
 	}
