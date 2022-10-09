@@ -67,7 +67,7 @@ public class BasePage {
      *
      * @param webElement
      */
-    protected static void clickElement(WebElement webElement) {
+    protected static void click(WebElement webElement) {
         implicitWait(webElement , 10);
         webElement.click();
         getScreenshot(webElement);

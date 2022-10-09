@@ -158,6 +158,7 @@ public class LojistaPage extends LojistaAttributes {
 		setText(enderecoEntrega, getPropertySettings("LevvMobile.data.enderecoEntrega"));
 		setText(valorNegociado, getPropertySettings("LevvMobile.data.valorNegociado"));
 		valorNegociado.click();
+		driver.hideKeyboard();
 
 	}
 

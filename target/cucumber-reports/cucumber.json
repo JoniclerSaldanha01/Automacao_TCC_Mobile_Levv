@@ -1,0 +1,123 @@
+[
+  {
+    "line": 5,
+    "elements": [
+      {
+        "start_timestamp": "2022-10-09T18:12:53.794Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14904000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "enviar produto para entrega",
+        "description": "",
+        "id": "cadastro-de-usuario-lojista-no-sistema-levv;enviar-produto-para-entrega",
+        "after": [
+          {
+            "result": {
+              "duration": 1710000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.fecharApp(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8453000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "que acesse o sistema com usuario cadastrado",
+            "match": {
+              "location": "steps.LojistaSteps.que_acesse_o_sistema_com_usuario_cadastrado()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 18775000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "acesso enviar produto",
+            "match": {
+              "location": "steps.LojistaSteps.acesso_enviar_produto()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 33442000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "preencho os campos enviar produto",
+            "match": {
+              "location": "steps.LojistaSteps.preencho_os_campos_enviar_produto()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 3946000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "clico em enviar pedido",
+            "match": {
+              "location": "steps.LojistaSteps.clico_em_enviar_pedido()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 14952000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "valido pedido em Pendentes",
+            "match": {
+              "location": "steps.LojistaSteps.valido_pedido_em_Pendentes()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          },
+          {
+            "name": "@EnviarProduto"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de usuario lojista no sistema Levv",
+    "description": "",
+    "id": "cadastro-de-usuario-lojista-no-sistema-levv",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/main/resources/features/Lojista.feature",
+    "tags": [
+      {
+        "name": "@Test",
+        "type": "Tag",
+        "location": {
+          "line": 4,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
