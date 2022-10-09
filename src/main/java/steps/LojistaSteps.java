@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import page.LojistaPage;
@@ -76,7 +77,7 @@ public class LojistaSteps {
 	}
 
 	@Quando("informo dataNascimento  cpf e cnpj")
-	public void informo_dataNascimento_cpf_e_cnpj()	throws InterruptedException {		
+	public void informo_dataNascimento_cpf_e_cnpj() throws InterruptedException {
 		cadastro.dataNascimento();
 		cadastro.cpfLojista();
 		cadastro.cnpjLojista();
@@ -100,7 +101,7 @@ public class LojistaSteps {
 		Thread.sleep(6000);
 	}
 
-	@Quando("preencho a tela de cadastro de endereco")
+	@E("preencho a tela de cadastro de endereco")
 	public void preencho_a_tela_de_cadastro_de_endereco() throws InterruptedException {
 		cadastro.CadastrarEndecoLojista();
 		Thread.sleep(8000);
@@ -117,7 +118,7 @@ public class LojistaSteps {
 	// Produto Entrega
 	@Dado("que acesse o sistema com usuario cadastrado")
 	public void que_acesse_o_sistema_com_usuario_cadastrado() throws InterruptedException {
-		Thread.sleep(3000);				
+		Thread.sleep(3000);
 		cadastro.usuarioCadastrado();
 
 	}
@@ -137,13 +138,13 @@ public class LojistaSteps {
 	@Quando("clico em enviar pedido")
 	public void clico_em_enviar_pedido() throws InterruptedException {
 		cadastro.enviarPedido();
-		
+
 	}
 
 	@Entao("valido pedido em Pendentes")
 	public void valido_pedido_em_Pendentes() throws InterruptedException {
 		cadastro.validarPedido();
-		
+
 	}
 
 }

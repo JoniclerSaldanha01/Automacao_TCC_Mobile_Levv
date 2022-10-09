@@ -4,8 +4,7 @@
 @Test
 Funcionalidade: Cadastro de usuario lojista no sistema Levv
 
-
-  
+ 
 
   @CadastrarLojista
   Cenario: Cadastrar novo usuario Lojista ao sistema

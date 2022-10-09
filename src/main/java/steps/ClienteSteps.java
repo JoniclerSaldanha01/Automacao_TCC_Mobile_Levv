@@ -8,7 +8,7 @@ import static utils.Utils.driver;
 public class ClienteSteps {
 
 	ClientePage cliente = new ClientePage(driver);
-	
+
 	@Quando("preencho o campo Nome Cliente Cliente")
 	public void preencho_o_campo_nome_cliente_cliente() {
 		cliente.nomeCliente();
@@ -44,8 +44,6 @@ public class ClienteSteps {
 	public void preencho_data_nascimento_e_cpf_cliente() throws InterruptedException {
 		cliente.dataEcpf();
 	}
-	
-
 
 	@Quando("clico em cadastrar Cliente")
 	public void clico_em_cadastrar_Cliente() throws InterruptedException {

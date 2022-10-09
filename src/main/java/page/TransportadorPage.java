@@ -1,118 +1,113 @@
 package page;
 
+import static utils.BasePage.setText;
 import static utils.Utils.driver;
+import static utils.Utils.getPropertySettings;
 import org.openqa.selenium.support.PageFactory;
 import attributes.TransportadorAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TransportadorPage extends TransportadorAttributes {
-	
+
 	public TransportadorPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		
-	}
-
-	public void selecionaTransportador() {
-		
-		try {
-			transportador.click();
-			Thread.sleep(2000);
-			}
-			catch(Exception e) {
-			  
-			}
-	}
-	
-	public void dataEcpf(String dt, String cpf) {
-		
-		try {
-			diaMesAno.sendKeys(dt);
-			cpfLojista.sendKeys(cpf);
-			Thread.sleep(2000);
-			}
-			catch(Exception e) {
-			  
-			}
-	}
-
-	public void numeroDocumento(String documento){
-		try {
-			docIdentificacao.sendKeys(documento);
-			Thread.sleep(2000);
-		}
-		catch(Exception e) {
-
-		}
-	}
-
-	public void imagemIdt(){
-		try {
-			btnIdt.click();
-			Thread.sleep(2000);
-			fotoIdt.click();
-			Thread.sleep(2000);
-			aceitarFotoIdt.click();
-			
-		}
-		catch(Exception e) {
-
-		}
 
 	}
 
-	public void selecionaTransporte(){
-		try {
-			moto.click();
-			Thread.sleep(2000);
-		}
-		catch(Exception e) {
+	public void nomeTransportador() {
 
-		}
+		setText(nameLastName, getPropertySettings("LevvMobile.data.NomeTransportador"));
 	}
 
-	public void camposObrigatorios(){
-		try {
-			marca.setValue("kawasaki");
-			modelo.click();
-			driver.hideKeyboard();
-			modelo.setValue("Z400");
-			renavan.setValue("125482649700");
-			placa.setValue("KWZ6678");
+	public void celularTransportador() {
 
-		}
-		catch(Exception e) {
-
-		}
+		setText(NumberPhone, getPropertySettings("LevvMobile.data.CelularTransportador"));
 	}
 
+	public void emailTransportador() {
 
-	public void emitrCrlv(){
-		try {
-			Thread.sleep(2000);
-			crlv.click();
-			Thread.sleep(2000);
-			btnFotoCrlv.click();
-			Thread.sleep(2000);
-			aceitarCrlv.click();
-			Thread.sleep(2000);
-			
-		}
-		catch(Exception e) {
-
-		}
+		setText(Email, getPropertySettings("LevvMobile.data.emailTransportador"));
 	}
 
-	public void btnCadastrar(){
-		try {
-			cadastroTransportador.click();
-			Thread.sleep(8000);
-			permitirLocalizacao.click();
-		}
-		catch(Exception e) {
+	public void senhaTransportador() {
 
-		}
+		setText(password1, getPropertySettings("LevvMobile.data.Senha1Transportador"));
 	}
 
+	public void confirmaSenhaTransportador() {
+
+		setText(password2, getPropertySettings("LevvMobile.data.Senha1Transportador"));
+	}
+
+	public void selecionaTransportador() throws InterruptedException {
+
+		transportador.click();
+		Thread.sleep(2000);
+
+	}
+
+	public void dataEcpf() throws InterruptedException {
+
+		setText(diaMesAno, getPropertySettings("LevvMobile.data.dataNascimentoTransportador"));
+		setText(cpfLojista, getPropertySettings("LevvMobile.data.cpfTransportador"));
+		Thread.sleep(2000);
+
+	}
+
+	public void numeroDocumento() throws InterruptedException {
+
+		setText(docIdentificacao, getPropertySettings("LevvMobile.data.DocumentoTransportador"));
+		Thread.sleep(2000);
+
+	}
+
+	public void imagemIdt() throws InterruptedException {
+
+		btnIdt.click();
+		Thread.sleep(2000);
+		fotoIdt.click();
+		Thread.sleep(2000);
+		aceitarFotoIdt.click();
+
+	}
+
+	public void selecionaTransporte() throws InterruptedException {
+
+		moto.click();
+		Thread.sleep(2000);
+
+	}
+
+	public void camposObrigatorios() {
+
+		marca.setValue("kawasaki");
+		modelo.click();
+		driver.hideKeyboard();
+		modelo.setValue("Z400");
+		renavan.setValue("125482649700");
+		placa.setValue("KWZ6678");
+
+	}
+
+	public void emitrCrlv() throws InterruptedException {
+
+		Thread.sleep(2000);
+		crlv.click();
+		Thread.sleep(2000);
+		btnFotoCrlv.click();
+		Thread.sleep(2000);
+		aceitarCrlv.click();
+		Thread.sleep(2000);
+
+	}
+
+	public void btnCadastrar() throws InterruptedException {
+
+		cadastroTransportador.click();
+		Thread.sleep(8000);
+		permitirLocalizacao.click();
+
+	}
 
 }
