@@ -63,7 +63,7 @@ public class TransportadorSteps {
 	}
 
 	@Quando("preencho demais campos obrigatorios")
-	public void preencho_demais_campos_obrigatorios() {
+	public void preencho_demais_campos_obrigatorios() throws InterruptedException {
 		cadastroTransportador.camposObrigatorios();
 	}
 
@@ -76,7 +76,7 @@ public class TransportadorSteps {
 	@Quando("efetuo o cadastro do transportador")
 	public void efetuo_o_cadastro_do_transportador() throws InterruptedException {
 		cadastroTransportador.btnCadastrar();
-		Thread.sleep(20000);
+		//Thread.sleep(20000);
 
 	}
 

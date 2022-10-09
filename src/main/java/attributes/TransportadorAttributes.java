@@ -71,7 +71,7 @@ public class TransportadorAttributes {
 	protected MobileElement cadastroTransportador;
 
 	// Cadastro endereco
-	@AndroidFindBy(id = "com.android.packageinstaller:id/permission_allow_button")
+	@AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
 	protected MobileElement permitirLocalizacao;
 
 }

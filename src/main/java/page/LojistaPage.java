@@ -120,7 +120,7 @@ public class LojistaPage extends LojistaAttributes {
 		cidade.setValue("São Paulo");
 		estado.setValue("São Paulo");
 		Thread.sleep(2000);
-		estado.click();
+		
 	}
 
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {

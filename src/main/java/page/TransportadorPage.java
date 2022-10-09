@@ -65,9 +65,10 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void imagemIdt() throws InterruptedException {
 
 		btnIdt.click();
-		Thread.sleep(2000);
+		System.out.println("Aguarda 10s elemnto");
+		Thread.sleep(10000);
 		fotoIdt.click();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		aceitarFotoIdt.click();
 
 	}
@@ -79,13 +80,17 @@ public class TransportadorPage extends TransportadorAttributes {
 
 	}
 
-	public void camposObrigatorios() {
+	public void camposObrigatorios() throws InterruptedException {
 
 		marca.setValue("kawasaki");
-		modelo.click();
-		driver.hideKeyboard();
+		//modelo.click();
 		modelo.setValue("Z400");
 		renavan.setValue("125482649700");
+		Thread.sleep(2000);
+		renavan.click();
+		Thread.sleep(2000);
+		driver.hideKeyboard();
+		Thread.sleep(2000);
 		placa.setValue("KWZ6678");
 
 	}
@@ -94,7 +99,7 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		Thread.sleep(2000);
 		crlv.click();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		btnFotoCrlv.click();
 		Thread.sleep(2000);
 		aceitarCrlv.click();
