@@ -178,9 +178,9 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void validarPedido() throws InterruptedException {
 
-		BasePage.fixedWait(6);
+		BasePage.implicitWait(acompanharEntrega, 10);
 		acompanharEntrega.click();
-		BasePage.fixedWait(2);
+		BasePage.implicitWait(abaPendentes, 10);
 		abaPendentes.click();
 		assertTrue(numeroPedido.isDisplayed());
 		BasePage.fixedWait(6);

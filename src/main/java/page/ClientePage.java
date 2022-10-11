@@ -61,7 +61,7 @@ public class ClientePage extends ClienteAttributes {
 	public void BotaoCadastrarCliente() throws InterruptedException {
 		
 		cadastrarCliente.click();
-		BasePage.fixedWait(3);
+		BasePage.implicitWait(permitirLocalizacao, 10);
 		permitirLocalizacao.click();
 
 	}

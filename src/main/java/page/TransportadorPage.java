@@ -67,7 +67,6 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void imagemIdt() throws InterruptedException {
 
 		btnIdt.click();
-		System.out.println("Aguarda 10s elemnto");
 		BasePage.implicitWait(fotoIdt, 15);
 		fotoIdt.click();
 		BasePage.implicitWait(aceitarFotoIdt, 10);
@@ -78,14 +77,13 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void selecionaTransporte() throws InterruptedException {
 
 		moto.click();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 
 	public void camposObrigatorios() throws InterruptedException {
 
 		marca.setValue("kawasaki");
-		// modelo.click();
 		modelo.setValue("Z400");
 		renavan.setValue("125482649700");
 		BasePage.fixedWait(2);
