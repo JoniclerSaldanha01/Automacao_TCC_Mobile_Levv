@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import attributes.TransportadorAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import utils.BasePage;
 
 public class TransportadorPage extends TransportadorAttributes {
 
@@ -17,6 +18,7 @@ public class TransportadorPage extends TransportadorAttributes {
 
 	public void nomeTransportador() {
 
+		BasePage.implicitWait(nameLastName, 10);
 		setText(nameLastName, getPropertySettings("LevvMobile.data.NomeTransportador"));
 	}
 
@@ -43,7 +45,7 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void selecionaTransportador() throws InterruptedException {
 
 		transportador.click();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 
@@ -51,14 +53,14 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		setText(diaMesAno, getPropertySettings("LevvMobile.data.dataNascimentoTransportador"));
 		setText(cpfLojista, getPropertySettings("LevvMobile.data.cpfTransportador"));
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 
 	public void numeroDocumento() throws InterruptedException {
 
 		setText(docIdentificacao, getPropertySettings("LevvMobile.data.DocumentoTransportador"));
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 
@@ -66,9 +68,9 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		btnIdt.click();
 		System.out.println("Aguarda 10s elemnto");
-		Thread.sleep(10000);
+		BasePage.implicitWait(fotoIdt, 15);
 		fotoIdt.click();
-		Thread.sleep(6000);
+		BasePage.implicitWait(aceitarFotoIdt, 10);
 		aceitarFotoIdt.click();
 
 	}
@@ -83,34 +85,34 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void camposObrigatorios() throws InterruptedException {
 
 		marca.setValue("kawasaki");
-		//modelo.click();
+		// modelo.click();
 		modelo.setValue("Z400");
 		renavan.setValue("125482649700");
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		renavan.click();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		driver.hideKeyboard();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		placa.setValue("KWZ6678");
 
 	}
 
 	public void emitrCrlv() throws InterruptedException {
 
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		crlv.click();
-		Thread.sleep(10000);
+		BasePage.implicitWait(btnFotoCrlv, 10);
 		btnFotoCrlv.click();
-		Thread.sleep(2000);
+		BasePage.implicitWait(aceitarCrlv, 10);
 		aceitarCrlv.click();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 
 	public void btnCadastrar() throws InterruptedException {
 
 		cadastroTransportador.click();
-		Thread.sleep(8000);
+		BasePage.implicitWait(permitirLocalizacao, 10);
 		permitirLocalizacao.click();
 
 	}

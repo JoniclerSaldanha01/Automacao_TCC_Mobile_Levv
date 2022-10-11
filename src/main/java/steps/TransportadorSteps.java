@@ -70,13 +70,12 @@ public class TransportadorSteps {
 	@E("envio foto CRLV")
 	public void envio_foto_CRLV() throws InterruptedException {
 		cadastroTransportador.emitrCrlv();
-		Thread.sleep(20000);
+
 	}
 
 	@Quando("efetuo o cadastro do transportador")
 	public void efetuo_o_cadastro_do_transportador() throws InterruptedException {
 		cadastroTransportador.btnCadastrar();
-		//Thread.sleep(20000);
 
 	}
 

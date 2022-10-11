@@ -5,6 +5,8 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import page.LojistaPage;
+import utils.BasePage;
+
 import static utils.Utils.*;
 import java.awt.AWTException;
 
@@ -14,7 +16,7 @@ public class LojistaSteps {
 
 	@Dado("que o usuario esteja na tela de criacao de Cadastro")
 	public void queOUsuarioEstejaNaTelaDeCriacaoDeCadastro() throws InterruptedException {
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		driver.hideKeyboard();
 		cadastro.validarTelaRegistro();
 
@@ -22,9 +24,9 @@ public class LojistaSteps {
 
 	@Quando("preencho o campo Nome")
 	public void preencho_o_campo_Nome() throws InterruptedException {
-
+	
 		cadastro.nome();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 
 	}
 

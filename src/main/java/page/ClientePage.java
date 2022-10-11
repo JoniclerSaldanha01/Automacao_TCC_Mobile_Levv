@@ -3,6 +3,8 @@ package page;
 import attributes.ClienteAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import utils.BasePage;
+
 import org.openqa.selenium.support.PageFactory;
 import static utils.BasePage.setText;
 import static utils.Utils.getPropertySettings;
@@ -17,6 +19,7 @@ public class ClientePage extends ClienteAttributes {
 
 	public void nomeCliente() {
 		
+		BasePage.implicitWait(nameLastName, 10);
 		setText(nameLastName,getPropertySettings("LevvMobile.data.NomeCliente"));
 	}
 	
@@ -43,7 +46,7 @@ public class ClientePage extends ClienteAttributes {
 	public void selecionaClente() throws InterruptedException {
 
 			cliente.click();
-			Thread.sleep(6000);
+			BasePage.fixedWait(6);
 		
 	}
 
@@ -51,20 +54,21 @@ public class ClientePage extends ClienteAttributes {
 		
 		setText(diaMesAno,getPropertySettings("LevvMobile.data.dataNascimento"));
 		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpf"));
-		Thread.sleep(6000);
+		BasePage.fixedWait(6);
 		
 	}
 
 	public void BotaoCadastrarCliente() throws InterruptedException {
 		
 		cadastrarCliente.click();
-		Thread.sleep(3000);
+		BasePage.fixedWait(3);
 		permitirLocalizacao.click();
 
 	}
 
 	public void CadastrarEndecoCliente() throws InterruptedException {
 
+		BasePage.implicitWait(logradouroLojista, 10);
 		setText(logradouroLojista,getPropertySettings("LevvMobile.data.logradouro"));
 		setText(numero,getPropertySettings("LevvMobile.data.numero"));
 		setText(complemento,getPropertySettings("LevvMobile.data.complemento"));
@@ -73,7 +77,7 @@ public class ClientePage extends ClienteAttributes {
 		setText(bairro,getPropertySettings("LevvMobile.data.bairro"));
 		setText(cidade,getPropertySettings("LevvMobile.data.cidade"));
 		setText(estado,getPropertySettings("LevvMobile.data.estado"));
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		estado.click();
 	}
 

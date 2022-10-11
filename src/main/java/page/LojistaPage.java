@@ -27,7 +27,7 @@ public class LojistaPage extends LojistaAttributes {
 
 // Insere Nome e SobreNome    
 	public void nome() {
-
+		BasePage.implicitWait(nameLastName, 10);
 		setText(nameLastName, getPropertySettings("LevvMobile.data.nomeLojista"));
 
 	}
@@ -113,6 +113,7 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void CadastrarEndecoLojista() throws InterruptedException {
 
+		BasePage.implicitWait(logradouroLojista, 10);
 		logradouroLojista.setValue("Praça da Sé");
 		numero.setValue("s/nº");
 		complemento.setValue("Ponto comercial");
@@ -136,6 +137,7 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void usuarioCadastrado() {
 
+		BasePage.implicitWait(usuarioJaCadastrado, 10);
 		usuarioJaCadastrado.click();
 		setText(emailCadastrado, getPropertySettings("LevvMobile.data.email"));
 		setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senha"));
