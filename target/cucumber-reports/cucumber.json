@@ -3,11 +3,11 @@
     "line": 5,
     "elements": [
       {
-        "start_timestamp": "2022-10-09T18:12:53.794Z",
+        "start_timestamp": "2022-10-11T01:23:08.270Z",
         "before": [
           {
             "result": {
-              "duration": 14904000000,
+              "duration": 11636000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 31,
-        "name": "enviar produto para entrega",
+        "line": 10,
+        "name": "Cadastrar novo usuario Lojista ao sistema",
         "description": "",
-        "id": "cadastro-de-usuario-lojista-no-sistema-levv;enviar-produto-para-entrega",
+        "id": "cadastro-de-usuario-lojista-no-sistema-levv;cadastrar-novo-usuario-lojista-ao-sistema",
         "after": [
           {
             "result": {
-              "duration": 1710000000,
+              "duration": 5193000000,
               "status": "passed"
             },
             "match": {
@@ -35,61 +35,170 @@
         "steps": [
           {
             "result": {
-              "duration": 8453000000,
+              "duration": 3590000000,
               "status": "passed"
             },
-            "line": 32,
-            "name": "que acesse o sistema com usuario cadastrado",
+            "line": 11,
+            "name": "que o usuario esteja na tela de criacao de Cadastro",
             "match": {
-              "location": "steps.LojistaSteps.que_acesse_o_sistema_com_usuario_cadastrado()"
+              "location": "steps.LojistaSteps.queOUsuarioEstejaNaTelaDeCriacaoDeCadastro()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 18775000000,
+              "duration": 3532000000,
               "status": "passed"
             },
-            "line": 33,
-            "name": "acesso enviar produto",
+            "line": 12,
+            "name": "preencho o campo Nome",
             "match": {
-              "location": "steps.LojistaSteps.acesso_enviar_produto()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 33442000000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "preencho os campos enviar produto",
-            "match": {
-              "location": "steps.LojistaSteps.preencho_os_campos_enviar_produto()"
+              "location": "steps.LojistaSteps.preencho_o_campo_Nome()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 3946000000,
+              "duration": 1083000000,
               "status": "passed"
             },
-            "line": 35,
-            "name": "clico em enviar pedido",
+            "line": 13,
+            "name": "informo Celular com DDD",
             "match": {
-              "location": "steps.LojistaSteps.clico_em_enviar_pedido()"
+              "location": "steps.LojistaSteps.informo_Celular_com_DDD()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 14952000000,
+              "duration": 874000000,
               "status": "passed"
             },
-            "line": 36,
-            "name": "valido pedido em Pendentes",
+            "line": 14,
+            "name": "informo o email",
             "match": {
-              "location": "steps.LojistaSteps.valido_pedido_em_Pendentes()"
+              "location": "steps.LojistaSteps.informo_o_email()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1162000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "informo a Senha",
+            "match": {
+              "location": "steps.LojistaSteps.informo_a_Senha()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 3366000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "confirmo a Senha",
+            "match": {
+              "location": "steps.LojistaSteps.confirmo_a_Senha()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 9839000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "clico em cadastrar",
+            "match": {
+              "location": "steps.LojistaSteps.clico_em_cadastrar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 8138000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "seleciono lojista",
+            "match": {
+              "location": "steps.LojistaSteps.seleciono_lojista()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 7659000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "informo dataNascimento  cpf e cnpj",
+            "match": {
+              "location": "steps.LojistaSteps.informo_dataNascimento_cpf_e_cnpj()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1385000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "informo Nome Empresa lojista",
+            "match": {
+              "location": "steps.LojistaSteps.informo_Nome_Empresa_lojista()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 13976000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "informo Nome Fantasia lojista nome fantasia",
+            "match": {
+              "location": "steps.LojistaSteps.informo_Nome_fantasia()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 12327000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "cadastro usuario lojista",
+            "match": {
+              "location": "steps.LojistaSteps.cadastro_usuario_lojista()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 17591000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "preencho a tela de cadastro de endereco",
+            "match": {
+              "location": "steps.LojistaSteps.preencho_a_tela_de_cadastro_de_endereco()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Can\u0027t locate an element by this strategy: By.chained({By.id: com.example.levv:id/btnEntregarProduto})\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)\r\n\tat io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)\r\n\tat io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(\u003cgenerated\u003e)\r\n\tat page.LojistaPage.botaoCadastrarEndereco(LojistaPage.java:131)\r\n\tat steps.LojistaSteps.cadastro_com_sucesso_o_endereco(LojistaSteps.java:113)\r\n\tat ✽.cadastro com sucesso o endereco(file:///C:/Users/Administrador/Desktop/Desenvolvimento%20TCC2/Automacao_TCC_Mobile_Levv/src/main/resources/features/Lojista.feature:24)\r\nCaused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@5e8604bf (tried for 1 second(s) with 500 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)\r\n\tat io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)\r\n\tat io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(\u003cgenerated\u003e)\r\n\tat page.LojistaPage.botaoCadastrarEndereco(LojistaPage.java:131)\r\n\tat steps.LojistaSteps.cadastro_com_sucesso_o_endereco(LojistaSteps.java:113)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:104)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)\r\n\tat io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)\r\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(Unknown Source)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:764)\r\n\tat org.testng.TestRunner.run(TestRunner.java:585)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1140)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1069)\r\n\tat org.testng.TestNG.run(TestNG.java:1037)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.example.levv:id/btnEntregarProduto})\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-VSSVHOR\u0027, ip: \u0027192.168.0.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_331\u0027\nDriver info: driver.version: AppiumDriver\r\n\tat io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)\r\n\tat io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)\r\n\tat io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\t... 54 more\r\n",
+              "duration": 2371000000,
+              "status": "failed"
+            },
+            "line": 24,
+            "name": "cadastro com sucesso o endereco",
+            "match": {
+              "location": "steps.LojistaSteps.cadastro_com_sucesso_o_endereco()"
             },
             "keyword": "Entao "
           }
@@ -99,7 +208,7 @@
             "name": "@Test"
           },
           {
-            "name": "@EnviarProduto"
+            "name": "@CadastrarLojista"
           }
         ]
       }

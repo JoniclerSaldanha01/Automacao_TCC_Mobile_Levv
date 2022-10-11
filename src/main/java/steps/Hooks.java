@@ -7,10 +7,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import static utils.Utils.acessarApp;
 import static utils.Utils.driver;
-
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.rules.TestName;
@@ -28,15 +26,17 @@ public class Hooks {
     }
 
     @After
-	public void fecharApp(Scenario cenario) throws Exception{
+	public static void fecharApp(Scenario cenario) throws Exception{
     	gerarScreenShot();
         driver.quit();
     }
     
-    public void gerarScreenShot() {
+    public static void gerarScreenShot() {
+    	
     	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/"+testName.getMethodName()+".png"));
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);    	
+    		FileUtils.copyFile(imagem, new File("target/screenshots/Screenshot.png"));
+				
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

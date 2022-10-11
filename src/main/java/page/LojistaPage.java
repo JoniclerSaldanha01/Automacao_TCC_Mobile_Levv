@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import utils.BasePage;
 
 public class LojistaPage extends LojistaAttributes {
 
@@ -20,7 +21,7 @@ public class LojistaPage extends LojistaAttributes {
 
 // Valida tela de cadastro
 	public void validarTelaRegistro() {
-
+		
 		assertTrue(nameLastName.isDisplayed());
 	}
 
@@ -38,7 +39,7 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void email() {
 
-		setText(Email, getPropertySettings("LevvMobile.data.email"));
+		setText(Email, getPropertySettings("LevvMobile.data.emailLojista"));
 
 	}
 
@@ -100,10 +101,11 @@ public class LojistaPage extends LojistaAttributes {
 	public void BotaoCadastrarLojista() throws InterruptedException {
 
 		cadastrarLojista.click();
-		// assertTrue(cadastroLojistaValidado.isDisplayed());
-		// cadastroLojistaValidado.click();
+		BasePage.fixedWait(4);
+		//assertTrue(cadastroLojistaValidado.isDisplayed());
+		//cadastroLojistaValidado.click();
 		System.out.println("PERMITIR");
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		permitir.click();
 	}
 
@@ -119,7 +121,7 @@ public class LojistaPage extends LojistaAttributes {
 		bairro.setValue("Centro Histórico de São Paulo");
 		cidade.setValue("São Paulo");
 		estado.setValue("São Paulo");
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		
 	}
 
@@ -128,7 +130,7 @@ public class LojistaPage extends LojistaAttributes {
 		btnCadastrarEndereco.click();
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
-		Thread.sleep(22000);
+		BasePage.fixedWait(22);
 		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 
@@ -144,15 +146,15 @@ public class LojistaPage extends LojistaAttributes {
 	public void produtoEnviar() throws InterruptedException {
 
 		eviarProduto.click();
-		Thread.sleep(3000);
+		BasePage.fixedWait(3);
 		permitir.click();
-		Thread.sleep(8000);
-	}
+		BasePage.fixedWait(4);
+		}
 
 	public void preencherCampos() throws InterruptedException {
 
 		setText(descricaoItem, getPropertySettings("LevvMobile.data.descricaoItem"));
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		volume.click();
 		setText(enderecoColeta, getPropertySettings("LevvMobile.data.endercoColeta"));
 		setText(enderecoEntrega, getPropertySettings("LevvMobile.data.enderecoEntrega"));
@@ -165,20 +167,20 @@ public class LojistaPage extends LojistaAttributes {
 	public void enviarPedido() throws InterruptedException {
 
 		btnEnviarPedido.click();
-		// Thread.sleep(4000);
+		// BasePage.fixedWait(4);
 		// btnEnviarPedido.click();
-		Thread.sleep(3000);
+		BasePage.fixedWait(3);
 		confirmarValor.click();
 
 	}
 
 	public void validarPedido() throws InterruptedException {
 
-		Thread.sleep(6000);
+		BasePage.fixedWait(6);
 		acompanharEntrega.click();
-		Thread.sleep(2000);
+		BasePage.fixedWait(2);
 		abaPendentes.click();
 		assertTrue(numeroPedido.isDisplayed());
-		Thread.sleep(6000);
+		BasePage.fixedWait(6);
 	}
 }
