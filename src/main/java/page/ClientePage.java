@@ -53,7 +53,7 @@ public class ClientePage extends ClienteAttributes {
 	public void dataEcpf() throws InterruptedException {
 		
 		setText(diaMesAno,getPropertySettings("LevvMobile.data.dataNascimento"));
-		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpf"));
+		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpfCliente"));
 		BasePage.fixedWait(6);
 		
 	}

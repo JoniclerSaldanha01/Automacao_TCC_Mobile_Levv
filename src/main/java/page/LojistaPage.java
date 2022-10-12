@@ -21,7 +21,8 @@ public class LojistaPage extends LojistaAttributes {
 
 // Valida tela de cadastro
 	public void validarTelaRegistro() {
-		
+
+		BasePage.implicitWait(nameLastName, 10);
 		assertTrue(nameLastName.isDisplayed());
 	}
 
@@ -61,6 +62,7 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void cadastroValidador() {
 
+		BasePage.implicitWait(validarCadastro, 10);
 		assertTrue(validarCadastro.isDisplayed());
 	}
 
@@ -129,9 +131,10 @@ public class LojistaPage extends LojistaAttributes {
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
 
 		btnCadastrarEndereco.click();
+		BasePage.implicitWait(enderecoLojistaValidado, 10);
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
-		BasePage.fixedWait(22);
+		BasePage.implicitWait(enderecoLojistaValidado, 22);
 		assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 
