@@ -24,10 +24,8 @@ public class LojistaSteps {
 
 	@Quando("preencho o campo Nome")
 	public void preencho_o_campo_Nome() throws InterruptedException {
-	
 		cadastro.nome();
-		BasePage.fixedWait(2);
-
+		
 	}
 
 	@Quando("informo Celular com DDD")
@@ -50,16 +48,15 @@ public class LojistaSteps {
 	@Quando("confirmo a Senha")
 	public void confirmo_a_Senha() throws InterruptedException {
 		cadastro.senha2();
-		Thread.sleep(2000);
+		
 	}
 
 	@Quando("clico em cadastrar")
 	public void clico_em_cadastrar() throws InterruptedException {
 		cadastro.botaoCadastrarCelular();
-		Thread.sleep(3000);
 		cadastro.cadastroValidador();
 		System.out.println("VALIDOU");
-		Thread.sleep(6000);
+		
 	}
 
 	@Entao("cadastro com sucesso")
@@ -71,11 +68,7 @@ public class LojistaSteps {
 	@Quando("seleciono lojista")
 	public void seleciono_lojista() {
 		cadastro.lojista();
-		try {
-			Thread.sleep(8000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	
 	}
 
 	@Quando("informo dataNascimento  cpf e cnpj")
@@ -83,7 +76,7 @@ public class LojistaSteps {
 		cadastro.dataNascimento();
 		cadastro.cpfLojista();
 		cadastro.cnpjLojista();
-		Thread.sleep(4000);
+		
 	}
 
 	@Quando("informo Nome Empresa lojista")
@@ -94,26 +87,24 @@ public class LojistaSteps {
 	@Quando("informo Nome Fantasia lojista nome fantasia")
 	public void informo_Nome_fantasia() throws InterruptedException {
 		cadastro.nomeFantasia();
-		Thread.sleep(13000);
+		
 	}
 
 	@Quando("cadastro usuario lojista")
 	public void cadastro_usuario_lojista() throws InterruptedException {
 		cadastro.BotaoCadastrarLojista();
-		Thread.sleep(6000);
-	}
+			}
 
 	@E("preencho a tela de cadastro de endereco")
 	public void preencho_a_tela_de_cadastro_de_endereco() throws InterruptedException {
 		cadastro.CadastrarEndecoLojista();
-		Thread.sleep(8000);
+		
 	}
 
 	@Entao("cadastro com sucesso o endereco")
 	public void cadastro_com_sucesso_o_endereco() throws InterruptedException, AWTException {
-
 		cadastro.botaoCadastrarEndereco();
-		Thread.sleep(8000);
+		
 
 	}
 

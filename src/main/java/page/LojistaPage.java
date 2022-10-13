@@ -81,13 +81,15 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void cpfLojista() {
-
-		setText(cpfLojista, getPropertySettings("LevvMobile.data.cpf"));
+		
+		cpfLojista.sendKeys(BasePage.gerarDocumento("CPF"));
+		
 	}
 
 	public void cnpjLojista() {
-
-		setText(lojistaCnpj, getPropertySettings("LevvMobile.data.cnpj"));
+		
+		lojistaCnpj.sendKeys(BasePage.gerarDocumento("CNPJ"));
+		
 	}
 
 	public void empresaNome() {
@@ -134,8 +136,8 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.implicitWait(enderecoLojistaValidado, 10);
 		assertTrue(enderecoLojistaValidado.isDisplayed());
 		System.out.println("VALIDADO CADASTRO LOJISTA");
-		BasePage.implicitWait(enderecoLojistaValidado, 22);
-		assertEquals(enderecoLojistaValidado, falhaSistema);
+		//BasePage.implicitWait(enderecoLojistaValidado, 22);
+		//assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 
 	public void usuarioCadastrado() {

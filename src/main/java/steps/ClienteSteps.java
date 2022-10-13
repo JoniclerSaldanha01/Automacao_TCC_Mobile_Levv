@@ -50,13 +50,13 @@ public class ClienteSteps {
 	@Quando("clico em cadastrar Cliente")
 	public void clico_em_cadastrar_Cliente() throws InterruptedException {
 		cliente.BotaoCadastrarCliente();
-		BasePage.fixedWait(8);
+		
 	}
 
 	@E("preencho a tela de cadastro de endereco cliente")
 	public void preencho_a_tela_de_cadastro_de_endereco_cliente() throws InterruptedException {
 		cliente.CadastrarEndecoCliente();
-		BasePage.fixedWait(8);
+		
 	}
 
 }

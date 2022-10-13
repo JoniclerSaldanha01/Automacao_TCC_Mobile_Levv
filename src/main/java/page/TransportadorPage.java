@@ -52,7 +52,7 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void dataEcpf() throws InterruptedException {
 
 		setText(diaMesAno, getPropertySettings("LevvMobile.data.dataNascimentoTransportador"));
-		setText(cpfLojista, getPropertySettings("LevvMobile.data.cpfTransportador"));
+		cpfLojista.sendKeys(BasePage.gerarDocumento("CPF"));
 		BasePage.fixedWait(2);
 
 	}

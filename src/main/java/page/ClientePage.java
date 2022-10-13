@@ -4,7 +4,6 @@ import attributes.ClienteAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.BasePage;
-
 import org.openqa.selenium.support.PageFactory;
 import static utils.BasePage.setText;
 import static utils.Utils.getPropertySettings;
@@ -53,7 +52,7 @@ public class ClientePage extends ClienteAttributes {
 	public void dataEcpf() throws InterruptedException {
 		
 		setText(diaMesAno,getPropertySettings("LevvMobile.data.dataNascimento"));
-		setText(cpfLojista,getPropertySettings("LevvMobile.data.cpfCliente"));
+		cpfLojista.sendKeys(BasePage.gerarDocumento("CPF"));
 		BasePage.fixedWait(6);
 		
 	}
@@ -78,7 +77,7 @@ public class ClientePage extends ClienteAttributes {
 		setText(cidade,getPropertySettings("LevvMobile.data.cidade"));
 		setText(estado,getPropertySettings("LevvMobile.data.estado"));
 		BasePage.fixedWait(2);
-		estado.click();
+		//estado.click();
 	}
 
 }
