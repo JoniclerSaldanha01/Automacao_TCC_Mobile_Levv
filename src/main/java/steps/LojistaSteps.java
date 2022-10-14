@@ -111,7 +111,6 @@ public class LojistaSteps {
 	// Produto Entrega
 	@Dado("que acesse o sistema com usuario cadastrado")
 	public void que_acesse_o_sistema_com_usuario_cadastrado() throws InterruptedException {
-		Thread.sleep(3000);
 		cadastro.usuarioCadastrado();
 
 	}
@@ -119,13 +118,13 @@ public class LojistaSteps {
 	@Dado("acesso enviar produto")
 	public void acesso_enviar_produto() throws InterruptedException {
 		cadastro.produtoEnviar();
-		Thread.sleep(3000);
+
 	}
 
 	@Quando("preencho os campos enviar produto")
 	public void preencho_os_campos_enviar_produto() throws InterruptedException {
 		cadastro.preencherCampos();
-		Thread.sleep(22000);
+		
 	}
 
 	@Quando("clico em enviar pedido")

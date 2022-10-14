@@ -46,12 +46,12 @@ public class LojistaPage extends LojistaAttributes {
 
 	public void senha1() {
 
-		setText(password1, getPropertySettings("LevvMobile.data.senha"));
+		setText(password1, getPropertySettings("LevvMobile.data.senhaLojista"));
 	}
 
 	public void senha2() {
 
-		setText(password2, getPropertySettings("LevvMobile.data.senha"));
+		setText(password2, getPropertySettings("LevvMobile.data.senhaLojista"));
 
 	}
 
@@ -144,8 +144,8 @@ public class LojistaPage extends LojistaAttributes {
 
 		BasePage.implicitWait(usuarioJaCadastrado, 10);
 		usuarioJaCadastrado.click();
-		setText(emailCadastrado, getPropertySettings("LevvMobile.data.email"));
-		setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senha"));
+		setText(emailCadastrado, getPropertySettings("LevvMobile.data.emailLojista"));
+		setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senhaLojista"));
 		logar.click();
 
 	}
@@ -153,13 +153,13 @@ public class LojistaPage extends LojistaAttributes {
 	public void produtoEnviar() throws InterruptedException {
 
 		eviarProduto.click();
-		BasePage.fixedWait(3);
+		BasePage.implicitWait(permitir, 10);
 		permitir.click();
-		BasePage.fixedWait(4);
+
 		}
 
 	public void preencherCampos() throws InterruptedException {
-
+		BasePage.implicitWait(descricaoItem, 10);
 		setText(descricaoItem, getPropertySettings("LevvMobile.data.descricaoItem"));
 		BasePage.fixedWait(2);
 		volume.click();
