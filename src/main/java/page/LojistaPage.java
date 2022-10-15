@@ -56,7 +56,8 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void botaoCadastrarCelular() {
-
+		BasePage.implicitWait(botaoCadastrar, 10);		
+		System.out.println("CLICK");
 		botaoCadastrar.click();
 	}
 
@@ -67,7 +68,7 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void lojista() {
-
+		BasePage.implicitWait(selecionaLojista, 10);
 		selecionaLojista.click();
 
 	}
@@ -151,7 +152,7 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void produtoEnviar() throws InterruptedException {
-
+		BasePage.implicitWait(eviarProduto, 10);
 		eviarProduto.click();
 		BasePage.implicitWait(permitir, 10);
 		permitir.click();

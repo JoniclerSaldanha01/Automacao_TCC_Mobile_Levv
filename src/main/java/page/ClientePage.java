@@ -43,7 +43,7 @@ public class ClientePage extends ClienteAttributes {
 	}
 	
 	public void selecionaClente() throws InterruptedException {
-
+			BasePage.implicitWait(cliente, 10);
 			cliente.click();
 			BasePage.fixedWait(6);
 		
