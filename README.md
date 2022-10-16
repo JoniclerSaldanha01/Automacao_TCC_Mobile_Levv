@@ -6,6 +6,7 @@
 - [x] TestNg
 - [X] Cucumber Report
 - [X] Screenshots da última tela
+- [X] Screenshots dos Steps
 - [x] Android Studio (para emular um Device).
 - [x] Intellij (Versões a partir de 2020, pode emular um Device na própria IDE).
 

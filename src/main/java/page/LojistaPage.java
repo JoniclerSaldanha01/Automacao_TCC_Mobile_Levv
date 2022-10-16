@@ -60,10 +60,18 @@ public class LojistaPage extends LojistaAttributes {
 
 		setText(password2, getPropertySettings("LevvMobile.data.senhaLojista"));
 
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastrar  preenchida.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public void botaoCadastrarCelular() {
-		BasePage.implicitWait(botaoCadastrar, 10);		
+		BasePage.implicitWait(botaoCadastrar, 10);
 		System.out.println("CLICK");
 		botaoCadastrar.click();
 	}
@@ -89,15 +97,15 @@ public class LojistaPage extends LojistaAttributes {
 	}
 
 	public void cpfLojista() {
-		
+
 		cpfLojista.sendKeys(BasePage.gerarDocumento("CPF"));
-		
+
 	}
 
 	public void cnpjLojista() {
-		
+
 		lojistaCnpj.sendKeys(BasePage.gerarDocumento("CNPJ"));
-		
+
 	}
 
 	public void empresaNome() {
@@ -108,16 +116,31 @@ public class LojistaPage extends LojistaAttributes {
 	public void nomeFantasia() {
 
 		setText(nomeFantasia, getPropertySettings("LevvMobile.data.NomeFantasia"));
+
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 Lojista-Dados empresa.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void BotaoCadastrarLojista() throws InterruptedException {
 
 		cadastrarLojista.click();
 		BasePage.fixedWait(4);
-		//assertTrue(cadastroLojistaValidado.isDisplayed());
-		//cadastroLojistaValidado.click();
+		// assertTrue(cadastroLojistaValidado.isDisplayed());
+		// cadastroLojistaValidado.click();
 		System.out.println("PERMITIR");
 		BasePage.fixedWait(2);
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 Lojista-Permitir.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		permitir.click();
 	}
 
@@ -135,17 +158,32 @@ public class LojistaPage extends LojistaAttributes {
 		cidade.setValue("São Paulo");
 		estado.setValue("São Paulo");
 		BasePage.fixedWait(2);
-		
+
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/4 Cadastro-Endereco preenchida.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
 
 		btnCadastrarEndereco.click();
+		BasePage.fixedWait(1);
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/5 Cadastrado.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		BasePage.implicitWait(enderecoLojistaValidado, 10);
 		assertTrue(enderecoLojistaValidado.isDisplayed());
-		System.out.println("VALIDADO CADASTRO LOJISTA");
-		//BasePage.implicitWait(enderecoLojistaValidado, 22);
-		//assertEquals(enderecoLojistaValidado, falhaSistema);
+		// BasePage.implicitWait(enderecoLojistaValidado, 22);
+		// assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 
 	public void usuarioCadastrado() {
@@ -155,11 +193,11 @@ public class LojistaPage extends LojistaAttributes {
 		setText(emailCadastrado, getPropertySettings("LevvMobile.data.emailLojista"));
 		setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senhaLojista"));
 		logar.click();
-    	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
-    		FileUtils.copyFile(imagem, new File("target/screenshots/usuario Cadastrado.png" ));
-    		
-    	} catch (IOException e) {
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 EnviarProduto-usuario Cadastrado.png"));
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -169,17 +207,16 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.implicitWait(eviarProduto, 10);
 		eviarProduto.click();
 		BasePage.implicitWait(permitir, 10);
-	   	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
-    		FileUtils.copyFile(imagem, new File("target/screenshots/Permitir.png" ));
-    		
-    	} catch (IOException e) {
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 EnviarProduto-Permitir.png"));
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		permitir.click();
 
-
-		}
+	}
 
 	public void preencherCampos() throws InterruptedException {
 		BasePage.implicitWait(descricaoItem, 10);
@@ -189,12 +226,12 @@ public class LojistaPage extends LojistaAttributes {
 		setText(enderecoColeta, getPropertySettings("LevvMobile.data.endercoColeta"));
 		setText(enderecoEntrega, getPropertySettings("LevvMobile.data.enderecoEntrega"));
 		setText(valorNegociado, getPropertySettings("LevvMobile.data.valorNegociado"));
-		
-    	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
-    		FileUtils.copyFile(imagem, new File("target/screenshots/preencher Campos Produtos.png" ));
-    		
-    	} catch (IOException e) {
+
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 EnviarProduto-preencher Campos Produtos.png"));
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -205,11 +242,11 @@ public class LojistaPage extends LojistaAttributes {
 		btnEnviarPedido.click();
 		BasePage.fixedWait(3);
 		confirmarValor.click();
-	   	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
-    		FileUtils.copyFile(imagem, new File("target/screenshots/Confirma Valor.png" ));
-    		
-    	} catch (IOException e) {
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/4 EnviarProduto-Confirma Valor.png"));
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
@@ -223,11 +260,11 @@ public class LojistaPage extends LojistaAttributes {
 		abaPendentes.click();
 		assertTrue(numeroPedido.isDisplayed());
 		BasePage.fixedWait(6);
-	   	try {
-    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
-    		FileUtils.copyFile(imagem, new File("target/screenshots/Validar Pedido.png" ));
-    		
-    	} catch (IOException e) {
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/5 EnviarProduto-Validar Pedido.png"));
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

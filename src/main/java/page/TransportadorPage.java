@@ -3,11 +3,19 @@ package page;
 import static utils.BasePage.setText;
 import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import attributes.TransportadorAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.BasePage;
+import utils.Utils;
 
 public class TransportadorPage extends TransportadorAttributes {
 
@@ -40,6 +48,14 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void confirmaSenhaTransportador() {
 
 		setText(password2, getPropertySettings("LevvMobile.data.Senha1Transportador"));
+
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastro Transportador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void selecionaTransportador() throws InterruptedException {
@@ -104,6 +120,13 @@ public class TransportadorPage extends TransportadorAttributes {
 		BasePage.implicitWait(aceitarCrlv, 10);
 		aceitarCrlv.click();
 		BasePage.fixedWait(2);
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 Cadastro Transportador.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -111,6 +134,14 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		cadastroTransportador.click();
 		BasePage.implicitWait(permitirLocalizacao, 10);
+
+		try {
+			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 Permitir localizacao.png"));
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		permitirLocalizacao.click();
 
 	}
