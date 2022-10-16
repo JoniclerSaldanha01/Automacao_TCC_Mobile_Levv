@@ -258,8 +258,6 @@ public class LojistaPage extends LojistaAttributes {
 		acompanharEntrega.click();
 		BasePage.implicitWait(abaPendentes, 10);
 		abaPendentes.click();
-		assertTrue(numeroPedido.isDisplayed());
-		BasePage.fixedWait(6);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(imagem, new File("target/screenshots/5 EnviarProduto-Validar Pedido.png"));
@@ -267,5 +265,8 @@ public class LojistaPage extends LojistaAttributes {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		assertTrue(numeroPedido.isDisplayed());
+		BasePage.fixedWait(6);
+
 	}
 }
