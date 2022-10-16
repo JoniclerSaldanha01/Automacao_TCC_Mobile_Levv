@@ -3,6 +3,7 @@ package steps;
 
 import io.cucumber.java.Scenario;
 import utils.Utils;
+import io.appium.java_client.MobileDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import static utils.Utils.acessarApp;
@@ -16,6 +17,7 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 public class Hooks {
 
@@ -25,6 +27,7 @@ public class Hooks {
     @Before
 	public static void setUp() throws Exception {
         acessarApp();
+
     }
 
     @After
@@ -45,4 +48,13 @@ public class Hooks {
     
 }
     
+    
+    /**
+     * Retorna o browser inicialzado
+     *
+     * @return
+     */
+    public static MobileDriver getDriver() {
+        return driver;
+    }
 }

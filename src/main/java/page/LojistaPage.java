@@ -6,11 +6,18 @@ import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
 
 import java.awt.AWTException;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import attributes.LojistaAttributes;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.BasePage;
+import utils.Utils;
 
 public class LojistaPage extends LojistaAttributes {
 
@@ -148,6 +155,13 @@ public class LojistaPage extends LojistaAttributes {
 		setText(emailCadastrado, getPropertySettings("LevvMobile.data.emailLojista"));
 		setText(senhaCadastrada, getPropertySettings("LevvMobile.data.senhaLojista"));
 		logar.click();
+    	try {
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
+    		FileUtils.copyFile(imagem, new File("target/screenshots/usuario Cadastrado.png" ));
+    		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -155,7 +169,15 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.implicitWait(eviarProduto, 10);
 		eviarProduto.click();
 		BasePage.implicitWait(permitir, 10);
+	   	try {
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
+    		FileUtils.copyFile(imagem, new File("target/screenshots/Permitir.png" ));
+    		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
 		permitir.click();
+
 
 		}
 
@@ -167,18 +189,29 @@ public class LojistaPage extends LojistaAttributes {
 		setText(enderecoColeta, getPropertySettings("LevvMobile.data.endercoColeta"));
 		setText(enderecoEntrega, getPropertySettings("LevvMobile.data.enderecoEntrega"));
 		setText(valorNegociado, getPropertySettings("LevvMobile.data.valorNegociado"));
-		valorNegociado.click();
-		driver.hideKeyboard();
+		
+    	try {
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
+    		FileUtils.copyFile(imagem, new File("target/screenshots/preencher Campos Produtos.png" ));
+    		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	public void enviarPedido() throws InterruptedException {
 
 		btnEnviarPedido.click();
-		// BasePage.fixedWait(4);
-		// btnEnviarPedido.click();
 		BasePage.fixedWait(3);
 		confirmarValor.click();
+	   	try {
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
+    		FileUtils.copyFile(imagem, new File("target/screenshots/Confirma Valor.png" ));
+    		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -190,5 +223,12 @@ public class LojistaPage extends LojistaAttributes {
 		abaPendentes.click();
 		assertTrue(numeroPedido.isDisplayed());
 		BasePage.fixedWait(6);
+	   	try {
+    		File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);      		
+    		FileUtils.copyFile(imagem, new File("target/screenshots/Validar Pedido.png" ));
+    		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

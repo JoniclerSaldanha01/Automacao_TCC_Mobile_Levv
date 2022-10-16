@@ -1,15 +1,21 @@
 package utils;
 
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import steps.Hooks;
+
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-	// private static WebDriver driver = Hooks.getDriver();
+	// private static MobileDriver<MobileElement> driver = Hooks.getDriver();
 	// private static int numArquivos = 0;
 	private static Duration gap(int time) {
 		return Duration.ofSeconds(time);
@@ -17,6 +23,7 @@ public class BasePage {
 	// private final Logger logger = Logger.getLogger(BasePage.class);
 
 	public BasePage() {
+		
 	}
 
 	/**
@@ -137,6 +144,7 @@ public class BasePage {
 		cnpj.append(d2);
 		return cnpj.toString();
 	}
+	
 
 	
 }
