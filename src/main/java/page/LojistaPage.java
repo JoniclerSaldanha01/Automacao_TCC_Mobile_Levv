@@ -2,13 +2,10 @@ package page;
 
 import static org.junit.Assert.*;
 import static utils.BasePage.setText;
-import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
-
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,6 +16,10 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.BasePage;
 import utils.Utils;
 
+/**
+ * @author Jonicler
+ *
+ */
 public class LojistaPage extends LojistaAttributes {
 
 	public LojistaPage(AppiumDriver<?> driver) {
@@ -26,36 +27,58 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
-// Valida tela de cadastro
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * valida Tela de Registro
+	 */
 	public void validarTelaRegistro() {
 
 		BasePage.implicitWait(nameLastName, 10);
 		assertTrue(nameLastName.isDisplayed());
 	}
 
-// Insere Nome e SobreNome    
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher Nome e Sobre nome
+	 */
 	public void nome() {
 		BasePage.implicitWait(nameLastName, 10);
 		setText(nameLastName, getPropertySettings("LevvMobile.data.nomeLojista"));
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher campo telefone
+	 */
 	public void phone() {
 
 		setText(NumberPhone, getPropertySettings("LevvMobile.data.telefone"));
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher e-mail do Lojista
+	 */
 	public void email() {
 
 		setText(Email, getPropertySettings("LevvMobile.data.emailLojista"));
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher o campo senha
+	 */
 	public void senha1() {
 
 		setText(password1, getPropertySettings("LevvMobile.data.senhaLojista"));
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher o campo confirmar senha
+	 */
 	public void senha2() {
 
 		setText(password2, getPropertySettings("LevvMobile.data.senhaLojista"));
@@ -70,49 +93,78 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Botao Cadastrar Celular
+	 */
 	public void botaoCadastrarCelular() {
 		BasePage.implicitWait(botaoCadastrar, 10);
-		System.out.println("CLICK");
 		botaoCadastrar.click();
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Validar Cadastro
+	 */
 	public void cadastroValidador() {
 
 		BasePage.implicitWait(validarCadastro, 10);
 		assertTrue(validarCadastro.isDisplayed());
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Seleciona Lojista
+	 */
 	public void lojista() {
 		BasePage.implicitWait(selecionaLojista, 10);
 		selecionaLojista.click();
 
 	}
 
-	// Cadastro Tela Lojista
-
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Preencher Data Nascimento
+	 */
 	public void dataNascimento() {
 
 		setText(diaMesAno, getPropertySettings("LevvMobile.data.dtNasc"));
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Preencher Campo CPF
+	 */
 	public void cpfLojista() {
 
 		cpfLojista.sendKeys(BasePage.gerarDocumento("CPF"));
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher CNPJ
+	 */
 	public void cnpjLojista() {
 
 		lojistaCnpj.sendKeys(BasePage.gerarDocumento("CNPJ"));
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher NOme empresa
+	 */
 	public void empresaNome() {
 
 		setText(nomeEmp, getPropertySettings("LevvMobile.data.NomeEmpresa"));
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher nome fantasia Empresa
+	 */
 	public void nomeFantasia() {
 
 		setText(nomeFantasia, getPropertySettings("LevvMobile.data.NomeFantasia"));
@@ -126,13 +178,16 @@ public class LojistaPage extends LojistaAttributes {
 		}
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Cadastrar Lojista
+	 */
 	public void BotaoCadastrarLojista() throws InterruptedException {
 
 		cadastrarLojista.click();
 		BasePage.fixedWait(4);
 		// assertTrue(cadastroLojistaValidado.isDisplayed());
 		// cadastroLojistaValidado.click();
-		System.out.println("PERMITIR");
 		BasePage.fixedWait(2);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
@@ -144,8 +199,10 @@ public class LojistaPage extends LojistaAttributes {
 		permitir.click();
 	}
 
-	// CADASTRO ENDERECO LOJISTA
-
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Cadastrar Endereco Lojista
+	 */
 	public void CadastrarEndecoLojista() throws InterruptedException {
 
 		BasePage.implicitWait(logradouroLojista, 10);
@@ -169,6 +226,10 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Cadastrar Endereco
+	 */
 	public void botaoCadastrarEndereco() throws InterruptedException, AWTException {
 
 		btnCadastrarEndereco.click();
@@ -186,6 +247,10 @@ public class LojistaPage extends LojistaAttributes {
 		// assertEquals(enderecoLojistaValidado, falhaSistema);
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Logar em usuario cadastrado
+	 */
 	public void usuarioCadastrado() {
 
 		BasePage.implicitWait(usuarioJaCadastrado, 10);
@@ -203,6 +268,10 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Acessar Enviar Produto
+	 */
 	public void produtoEnviar() throws InterruptedException {
 		BasePage.implicitWait(eviarProduto, 10);
 		eviarProduto.click();
@@ -218,6 +287,10 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * preencher campos Produto enviar
+	 */
 	public void preencherCampos() throws InterruptedException {
 		BasePage.implicitWait(descricaoItem, 10);
 		setText(descricaoItem, getPropertySettings("LevvMobile.data.descricaoItem"));
@@ -237,6 +310,10 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Enviar pedido e Confirmar Valor
+	 */
 	public void enviarPedido() throws InterruptedException {
 
 		btnEnviarPedido.click();
@@ -252,6 +329,10 @@ public class LojistaPage extends LojistaAttributes {
 
 	}
 
+	/**
+	 * Metodo a ser chamado pela classe lojistaSteps, no qual contem o metodo para
+	 * Validar Pedido
+	 */
 	public void validarPedido() throws InterruptedException {
 
 		BasePage.implicitWait(acompanharEntrega, 10);

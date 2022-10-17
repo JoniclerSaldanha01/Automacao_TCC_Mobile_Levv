@@ -38,7 +38,7 @@ public class ClienteSteps {
 
 	@Quando("seleciono cliente")
 	public void seleciono_cliente() throws InterruptedException {
-		cliente.selecionaClente();
+		cliente.selecionaCliente();
 
 	}
 
@@ -55,7 +55,7 @@ public class ClienteSteps {
 
 	@E("preencho a tela de cadastro de endereco cliente")
 	public void preencho_a_tela_de_cadastro_de_endereco_cliente() throws InterruptedException {
-		cliente.CadastrarEndecoCliente();
+		cliente.CadastrarEnderecoCliente();
 		
 	}
 
