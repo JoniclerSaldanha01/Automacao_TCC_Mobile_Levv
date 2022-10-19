@@ -6,6 +6,7 @@ import static utils.Utils.getPropertySettings;
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,7 +22,8 @@ import utils.Utils;
  *
  */
 public class LojistaPage extends LojistaAttributes {
-
+	LocalDate myObj = LocalDate.now();
+	
 	public LojistaPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
@@ -85,7 +87,7 @@ public class LojistaPage extends LojistaAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastrar  preenchida.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastrar  preenchida " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -99,6 +101,7 @@ public class LojistaPage extends LojistaAttributes {
 	 */
 	public void botaoCadastrarCelular() {
 		BasePage.implicitWait(botaoCadastrar, 10);
+		System.out.println("CLICAR");
 		botaoCadastrar.click();
 	}
 
@@ -171,7 +174,7 @@ public class LojistaPage extends LojistaAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/2 Lojista-Dados empresa.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 Lojista-Dados empresa " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -191,7 +194,7 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.fixedWait(2);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/3 Lojista-Permitir.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 Lojista-Permitir " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -218,7 +221,7 @@ public class LojistaPage extends LojistaAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/4 Cadastro-Endereco preenchida.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/4 Cadastro-Endereco preenchida " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -236,7 +239,7 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.fixedWait(1);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/5 Cadastrado.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/5 Cadastrado " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -260,7 +263,7 @@ public class LojistaPage extends LojistaAttributes {
 		logar.click();
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/1 EnviarProduto-usuario Cadastrado.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 EnviarProduto-usuario Cadastrado " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -278,7 +281,7 @@ public class LojistaPage extends LojistaAttributes {
 		BasePage.implicitWait(permitir, 10);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/2 EnviarProduto-Permitir.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 EnviarProduto-Permitir " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -302,7 +305,7 @@ public class LojistaPage extends LojistaAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/3 EnviarProduto-preencher Campos Produtos.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 EnviarProduto-preencher Campos Produtos " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -321,7 +324,7 @@ public class LojistaPage extends LojistaAttributes {
 		confirmarValor.click();
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/4 EnviarProduto-Confirma Valor.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/4 EnviarProduto-Confirma Valor " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -341,7 +344,7 @@ public class LojistaPage extends LojistaAttributes {
 		abaPendentes.click();
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/5 EnviarProduto-Validar Pedido.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/5 EnviarProduto-Validar Pedido " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();

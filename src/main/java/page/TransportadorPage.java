@@ -5,6 +5,7 @@ import static utils.Utils.driver;
 import static utils.Utils.getPropertySettings;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,6 +22,8 @@ import utils.Utils;
  */
 public class TransportadorPage extends TransportadorAttributes {
 
+	LocalDate myObj = LocalDate.now();
+	
 	public TransportadorPage(AppiumDriver<?> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
@@ -73,7 +76,7 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastro Transportador.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastro Transportador " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -85,7 +88,7 @@ public class TransportadorPage extends TransportadorAttributes {
 	 * Seleciona Transportador
 	 */
 	public void selecionaTransportador() throws InterruptedException {
-
+		BasePage.implicitWait(transportador, 10);
 		transportador.click();
 		BasePage.fixedWait(2);
 
@@ -162,17 +165,18 @@ public class TransportadorPage extends TransportadorAttributes {
 	 * Emitir CRLV
 	 */
 	public void emitrCrlv() throws InterruptedException {
-
+	
 		BasePage.fixedWait(2);
 		crlv.click();
 		BasePage.implicitWait(btnFotoCrlv, 10);
+		System.out.println("Emitir foto");
 		btnFotoCrlv.click();
 		BasePage.implicitWait(aceitarCrlv, 10);
 		aceitarCrlv.click();
 		BasePage.fixedWait(2);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/2 Cadastro Transportador.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 Cadastro Transportador " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -191,7 +195,7 @@ public class TransportadorPage extends TransportadorAttributes {
 
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/3 Permitir localizacao.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/3 Permitir localizacao " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();

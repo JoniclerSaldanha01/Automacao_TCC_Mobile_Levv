@@ -54,7 +54,7 @@ public class LojistaSteps {
 	@Quando("clico em cadastrar")
 	public void clico_em_cadastrar() throws InterruptedException {
 		cadastro.botaoCadastrarCelular();
-		cadastro.cadastroValidador();
+		//cadastro.cadastroValidador();
 		System.out.println("VALIDOU");
 		
 	}

@@ -6,6 +6,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.BasePage;
 import utils.Utils;
 import org.apache.commons.io.FileUtils;
+import java.time.LocalDate;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
@@ -19,11 +20,14 @@ import java.io.IOException;
  *
  */
 public class ClientePage extends ClienteAttributes {
-
+	LocalDate myObj = LocalDate.now();
+		
+	
 	public ClientePage(AppiumDriver<?> driver) {
 
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-
+		 
+		
 	}
 
 	/**
@@ -68,11 +72,11 @@ public class ClientePage extends ClienteAttributes {
 	 * preencher confirmar a Senha
 	 */
 	public void confirmarSenha() {
-
+		
 		setText(password2, getPropertySettings("LevvMobile.data.Senha1"));
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastro cliente.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/1 Cadastro cliente " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -101,7 +105,7 @@ public class ClientePage extends ClienteAttributes {
 		BasePage.fixedWait(6);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/2 Cliente-Dados.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/2 Cliente-Dados " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -119,7 +123,7 @@ public class ClientePage extends ClienteAttributes {
 		BasePage.implicitWait(permitirLocalizacao, 10);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/4 Cliente-Permitir localizacao.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/4 Cliente-Permitir localizacao " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -146,7 +150,7 @@ public class ClientePage extends ClienteAttributes {
 		BasePage.fixedWait(2);
 		try {
 			File imagem = ((TakesScreenshot) Utils.driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("target/screenshots/3 Cliente-Cadastro endereco.png"));
+			FileUtils.copyFile(imagem, new File("target/screenshots/4.1 Cliente-Cadastro endereco " + myObj + ".png"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
