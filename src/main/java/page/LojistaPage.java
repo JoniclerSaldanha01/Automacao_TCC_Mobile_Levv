@@ -101,7 +101,6 @@ public class LojistaPage extends LojistaAttributes {
 	 */
 	public void botaoCadastrarCelular() {
 		BasePage.implicitWait(botaoCadastrar, 10);
-		System.out.println("CLICAR");
 		botaoCadastrar.click();
 	}
 

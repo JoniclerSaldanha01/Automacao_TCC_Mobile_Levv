@@ -4,7 +4,7 @@
 Funcionalidade: Cadastro de usuario Cliente no sistema Levv
 
 
-  @CadastrarCliente
+  @CT01_CadastrarCliente
    Cenario: Cadastrar novo usuario Cliente ao sistema
     Dado que o usuario esteja na tela de criacao de Cadastro
     Quando preencho o campo Nome Cliente Cliente

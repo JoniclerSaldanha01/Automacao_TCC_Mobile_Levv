@@ -169,7 +169,6 @@ public class TransportadorPage extends TransportadorAttributes {
 		BasePage.fixedWait(2);
 		crlv.click();
 		BasePage.implicitWait(btnFotoCrlv, 10);
-		System.out.println("Emitir foto");
 		btnFotoCrlv.click();
 		BasePage.implicitWait(aceitarCrlv, 10);
 		aceitarCrlv.click();

@@ -6,7 +6,7 @@ Funcionalidade: Cadastro de usuario lojista no sistema Levv
 
  
 
-  @CadastrarLojista
+  @CT01_CadastrarLojista
   Cenario: Cadastrar novo usuario Lojista ao sistema
   Dado que o usuario esteja na tela de criacao de Cadastro
   Quando preencho o campo Nome
@@ -27,7 +27,7 @@ Funcionalidade: Cadastro de usuario lojista no sistema Levv
     
     
     
-  @EnviarProduto
+  @CT02_EnviarProduto
   Cenario: enviar produto para entrega
   Dado que acesse o sistema com usuario cadastrado
   E acesso enviar produto

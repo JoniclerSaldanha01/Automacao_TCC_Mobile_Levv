@@ -5,7 +5,7 @@ Funcionalidade: Cadastro de usuario Transportador no sistema Levv
 
   
 
-  @CadastrarTransportador
+  @CT01_CadastrarTransportador
   Cenario: Cadastrar novo usuario Transportador ao sistema
   Dado que o usuario esteja na tela de criacao de Cadastro
   Quando preencho o campo Nome Transportador
