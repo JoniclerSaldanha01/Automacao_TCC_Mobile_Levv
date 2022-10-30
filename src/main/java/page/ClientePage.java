@@ -81,6 +81,7 @@ public class ClientePage extends ClienteAttributes {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		BasePage.fixedWait(4);
 	}
 
 	/**

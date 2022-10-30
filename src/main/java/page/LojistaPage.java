@@ -92,7 +92,7 @@ public class LojistaPage extends LojistaAttributes {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		BasePage.fixedWait(4);
 	}
 
 	/**

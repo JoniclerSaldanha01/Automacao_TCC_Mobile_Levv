@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
         },
         features = {"src\\main\\resources\\features"},
         glue = {"steps"},
-        tags = "@CT01_CadastrarCliente"
+        tags = "@CT01_CadastrarTransportador"
         
 )
 

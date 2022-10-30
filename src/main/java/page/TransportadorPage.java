@@ -81,6 +81,7 @@ public class TransportadorPage extends TransportadorAttributes {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		BasePage.fixedWait(4);
 	}
 
 	/**
@@ -124,6 +125,7 @@ public class TransportadorPage extends TransportadorAttributes {
 	public void imagemIdt() throws InterruptedException {
 
 		btnIdt.click();
+		System.out.println("FOTO IDT");
 		BasePage.implicitWait(fotoIdt, 15);
 		fotoIdt.click();
 		BasePage.implicitWait(aceitarFotoIdt, 10);
